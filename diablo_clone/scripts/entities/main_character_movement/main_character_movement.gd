@@ -1,5 +1,6 @@
-extends Movement
+extends CharacterBody2D
 
+@export var speed = 70
 @export var jump_velocity = -40.0
 
 
