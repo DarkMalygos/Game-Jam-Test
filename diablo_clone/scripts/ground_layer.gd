@@ -14,4 +14,4 @@ func create_cell_boundaries():
 
 func set_boundary(cell: Vector2i):
 	if not get_cell_tile_data(cell):
-		set_cell(cell, 0, Vector2i(7, 0))
+		set_cell(cell, 0, Vector2i(6, 0))
