@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://dov3x3d4mvh2i"]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon.gd" id="1_rhnn7"]
+[ext_resource type="Script" path="res://scripts/abilities/ability.gd" id="2_6hnpt"]
+[ext_resource type="Texture2D" path="res://assets/sprites/weapons/staff.png" id="2_u6u5v"]
+[ext_resource type="Resource" path="res://resources/abilities/ranged_attack.tres" id="3_evnji"]
+
+[node name="Weapon" type="Node2D"]
+script = ExtResource("1_rhnn7")
+abilities = Array[ExtResource("2_6hnpt")]([ExtResource("3_evnji")])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_u6u5v")
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2(-28, -136)
