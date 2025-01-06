@@ -39,4 +39,4 @@ position = Vector2(-157, -350)
 scale = Vector2(0.1, 0.1)
 
 [node name="MainCharacter" parent="TileMap" instance=ExtResource("3_fty4o")]
-position = Vector2(-193, -358)
+position = Vector2(-196, -348)

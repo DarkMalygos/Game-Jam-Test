@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RangedAttack" load_steps=2 format=3 uid="uid://bgvsi6s7d6q4h"]
+
+[ext_resource type="Script" path="res://scripts/abilities/ranged_attack.gd" id="1_hpcmv"]
+
+[resource]
+script = ExtResource("1_hpcmv")
+name = "Ranged attack"
+cooldown = 2.0
