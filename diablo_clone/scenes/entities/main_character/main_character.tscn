@@ -4,12 +4,20 @@
 [ext_resource type="Script" path="res://scripts/entities/main_character_body/main_character_body.gd" id="2_uxssg"]
 
 [node name="MainCharacter" instance=ExtResource("1_1s8lj")]
-scale = Vector2(0.125, 0.125)
 
 [node name="CharacterBody2D" parent="." index="0"]
 script = ExtResource("2_uxssg")
-speed = 70.0
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" index="2"]
-zoom = Vector2(10, 10)
+[node name="AnimatedSprite2D" parent="CharacterBody2D" index="0"]
+position = Vector2(304, 146)
+
+[node name="CollisionShape2D" parent="CharacterBody2D" index="1"]
+position = Vector2(304, 187)
+
+[node name="Weapon" parent="CharacterBody2D" index="2"]
+position = Vector2(361, 115)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" index="3"]
+position = Vector2(304, 138)
+zoom = Vector2(4, 4)
 position_smoothing_enabled = true

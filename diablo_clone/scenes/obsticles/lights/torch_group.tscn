@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://26l1n6bqpmso"]
+
+[ext_resource type="PackedScene" uid="uid://b4evc02xn0nfg" path="res://scenes/obsticles/lights/torch.tscn" id="1_yg8qm"]
+
+[node name="TorchGroup" type="Node2D"]
+
+[node name="Torch" parent="." instance=ExtResource("1_yg8qm")]
+position = Vector2(-288, -39)
+
+[node name="Torch2" parent="." instance=ExtResource("1_yg8qm")]
+position = Vector2(-32, -167)
+
+[node name="Torch3" parent="." instance=ExtResource("1_yg8qm")]
+position = Vector2(288, -6)
+
+[node name="Torch4" parent="." instance=ExtResource("1_yg8qm")]
+position = Vector2(32, 122)

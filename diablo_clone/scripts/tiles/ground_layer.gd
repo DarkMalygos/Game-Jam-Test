@@ -1,7 +1,7 @@
 extends TileMapLayer
 
 func _ready() -> void:
-	create_cell_boundaries(5)
+	create_cell_boundaries(10)
 	
 func create_cell_boundaries(radius: int):
 	var used_cells = get_used_cells()

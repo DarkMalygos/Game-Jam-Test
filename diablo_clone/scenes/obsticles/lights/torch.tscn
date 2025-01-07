@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwa2q4g051eum"]
+[gd_scene load_steps=8 format=3 uid="uid://b4evc02xn0nfg"]
 
 [ext_resource type="Script" path="res://scripts/torch_animation/torch_animation.gd" id="1_kjnvp"]
-[ext_resource type="Texture2D" uid="uid://da57ikwpxb7j0" path="res://assets/sprites/torch/torch_left.png" id="1_vr3sb"]
-[ext_resource type="Texture2D" uid="uid://jry3fwxq86pj" path="res://assets/sprites/torch/torch_normal.png" id="2_wuvxx"]
-[ext_resource type="Texture2D" uid="uid://bx83h16yu6s2" path="res://assets/sprites/torch/torch_right.png" id="3_1x1gs"]
-[ext_resource type="Texture2D" uid="uid://dhl54hefromtr" path="res://assets/sprites/lights/torch_light.png" id="5_8f3ih"]
+[ext_resource type="Texture2D" uid="uid://da57ikwpxb7j0" path="res://assets/sprites/obsticles/lights/torch_left.png" id="1_vr3sb"]
+[ext_resource type="Texture2D" uid="uid://jry3fwxq86pj" path="res://assets/sprites/obsticles/lights/torch_normal.png" id="2_wuvxx"]
+[ext_resource type="Texture2D" uid="uid://bx83h16yu6s2" path="res://assets/sprites/obsticles/lights/torch_right.png" id="3_1x1gs"]
+[ext_resource type="Texture2D" uid="uid://dhl54hefromtr" path="res://assets/sprites/obsticles/lights/torch_light.png" id="5_8f3ih"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y6g82"]
 size = Vector2(6, 14)
@@ -30,6 +30,7 @@ animations = [{
 }]
 
 [node name="Torch" type="Node2D"]
+position = Vector2(222, -3)
 
 [node name="TorchBody" type="StaticBody2D" parent="."]
 

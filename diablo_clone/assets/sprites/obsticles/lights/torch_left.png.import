@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qpbi27oxlxr"
-path="res://.godot/imported/main_character5.png-a4dfa0cf5fb36cea8b27d36ddf1cb1d0.ctex"
+uid="uid://da57ikwpxb7j0"
+path="res://.godot/imported/torch_left.png-19f473f688a0179f731a0f95f7c49abd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/entities/main_character/main_character5.png"
-dest_files=["res://.godot/imported/main_character5.png-a4dfa0cf5fb36cea8b27d36ddf1cb1d0.ctex"]
+source_file="res://assets/sprites/obsticles/lights/torch_left.png"
+dest_files=["res://.godot/imported/torch_left.png-19f473f688a0179f731a0f95f7c49abd.ctex"]
 
 [params]
 

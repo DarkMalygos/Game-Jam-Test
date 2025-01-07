@@ -14,6 +14,7 @@ animations = [{
 }]
 
 [node name="AztecTemple" type="Node2D"]
+position = Vector2(303, -1)
 scale = Vector2(0.7, 0.7)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

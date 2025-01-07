@@ -2,6 +2,9 @@ extends EntityBody
 
 #@export var jump_velocity = -40.0
 
+func _ready() -> void:
+	speed = 70
+
 func _physics_process(delta: float) -> void:
 	#if not is_on_floor():
 		#velocity += get_gravity() * delta

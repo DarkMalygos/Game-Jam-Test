@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://b0w4pmjhnu7ml"]
 
 [ext_resource type="Script" path="res://scripts/entities/entity_body.gd" id="1_1p27h"]
-[ext_resource type="Texture2D" uid="uid://qpbi27oxlxr" path="res://assets/sprites/entities/main_character/main_character5.png" id="2_3s5q8"]
-[ext_resource type="PackedScene" uid="uid://ddu0bjt5tfdbf" path="res://scenes/weapon/weapon.tscn" id="3_xwbjv"]
+[ext_resource type="Texture2D" uid="uid://qpbi27oxlxr" path="res://assets/sprites/entities/main_character/test_character.png" id="2_3s5q8"]
+[ext_resource type="PackedScene" uid="uid://ddu0bjt5tfdbf" path="res://scenes/weapons/weapon.tscn" id="3_xwbjv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tv786"]
 animations = [{
@@ -18,6 +18,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_a47sp"]
 
 [node name="Entity" type="Node2D"]
+scale = Vector2(0.125, 0.125)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_1p27h")
