@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dov3x3d4mvh2i"]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon.gd" id="1_rhnn7"]
+[ext_resource type="Texture2D" uid="uid://defdujyckswop" path="res://assets/sprites/weapons/staff.png" id="2_dq1ld"]
+
+[node name="Weapon" type="Node2D"]
+position = Vector2(59, -32)
+rotation = -0.698132
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_rhnn7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dq1ld")
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2(-28, -136)

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://buys10kgnf6yb"]
+
+[ext_resource type="PackedScene" uid="uid://b0w4pmjhnu7ml" path="res://scenes/entities/entity.tscn" id="1_74ue6"]
+[ext_resource type="Script" path="res://scripts/entities/entity_bodies/ranged_enemy/ranged_enemy_body.gd" id="2_jbijb"]
+
+[node name="RangedEnemy" instance=ExtResource("1_74ue6")]
+
+[node name="EntityBody" parent="." index="0"]
+script = ExtResource("2_jbijb")
+stop_distance = 80.0
+move_away_distance = 50.0
+speed = 30

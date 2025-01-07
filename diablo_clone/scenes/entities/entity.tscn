@@ -1,3 +1,35 @@
-[gd_scene format=3 uid="uid://b0w4pmjhnu7ml"]
+[gd_scene load_steps=8 format=3 uid="uid://b0w4pmjhnu7ml"]
+
+[ext_resource type="Script" path="res://scripts/entities/entity_bodies/entity_body.gd" id="1_2wjaa"]
+[ext_resource type="Texture2D" uid="uid://qpbi27oxlxr" path="res://assets/sprites/entities/main_character/main_character5.png" id="2_6yb70"]
+[ext_resource type="PackedScene" uid="uid://dov3x3d4mvh2i" path="res://scenes/weapons/weapon.tscn" id="3_y5r3r"]
+[ext_resource type="Script" path="res://scripts/abilities/ability.gd" id="4_qnlwn"]
+[ext_resource type="Resource" uid="uid://bgvsi6s7d6q4h" path="res://resources/abilities/ranged_attack.tres" id="5_laqpq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l1rkt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6yb70")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n7flt"]
 
 [node name="Entity" type="Node2D"]
+
+[node name="EntityBody" type="CharacterBody2D" parent="."]
+script = ExtResource("1_2wjaa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="EntityBody"]
+sprite_frames = SubResource("SpriteFrames_l1rkt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntityBody"]
+position = Vector2(0, 41)
+shape = SubResource("CircleShape2D_n7flt")
+
+[node name="Weapon" parent="EntityBody" instance=ExtResource("3_y5r3r")]
+abilities = Array[ExtResource("4_qnlwn")]([ExtResource("5_laqpq")])
