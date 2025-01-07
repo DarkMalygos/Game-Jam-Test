@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhl54hefromtr"
-path="res://.godot/imported/torch_light.png-37fab2985f7cb30a66e2b61ccd5dbc07.ctex"
+uid="uid://b8gn6cmw2hml0"
+path="res://.godot/imported/staff.png-d86f8e18f0b6781c8d3380ab03605d18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/entities/lights/torch_light.png"
-dest_files=["res://.godot/imported/torch_light.png-37fab2985f7cb30a66e2b61ccd5dbc07.ctex"]
+source_file="res://assets/sprites/weapons/staff.png"
+dest_files=["res://.godot/imported/staff.png-d86f8e18f0b6781c8d3380ab03605d18.ctex"]
 
 [params]
 
