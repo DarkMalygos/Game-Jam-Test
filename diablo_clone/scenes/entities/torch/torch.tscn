@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwa2q4g051eum"]
+
+[ext_resource type="Script" path="res://scripts/entities/torch_animation/torch_animation.gd" id="1_kjnvp"]
+[ext_resource type="Texture2D" uid="uid://da57ikwpxb7j0" path="res://assets/sprites/entities/torch/torch_left.png" id="1_vr3sb"]
+[ext_resource type="Texture2D" uid="uid://jry3fwxq86pj" path="res://assets/sprites/entities/torch/torch_normal.png" id="2_wuvxx"]
+[ext_resource type="Texture2D" uid="uid://bx83h16yu6s2" path="res://assets/sprites/entities/torch/torch_right.png" id="3_1x1gs"]
+[ext_resource type="Texture2D" uid="uid://dhl54hefromtr" path="res://assets/sprites/entities/lights/torch_light.png" id="5_8f3ih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6g82"]
+size = Vector2(6, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r4big"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vr3sb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wuvxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1x1gs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wuvxx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Torch" type="Node2D"]
+
+[node name="TorchBody" type="CharacterBody2D" parent="."]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_kjnvp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TorchBody"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_y6g82")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TorchBody"]
+sprite_frames = SubResource("SpriteFrames_r4big")
+frame_progress = 0.592471
+
+[node name="PointLight2D" type="PointLight2D" parent="TorchBody"]
+position = Vector2(0, -4)
+scale = Vector2(1.08789, 1.01758)
+color = Color(1, 0.878431, 0, 1)
+energy = 0.5
+texture = ExtResource("5_8f3ih")
