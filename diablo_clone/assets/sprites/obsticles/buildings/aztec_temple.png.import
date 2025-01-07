@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4nny7nqpw0qe"
-path="res://.godot/imported/stonewall_right.png-1912631413c691ebf33dc257bd5ed21e.ctex"
+uid="uid://opcq52pvxvev"
+path="res://.godot/imported/aztec_temple.png-965193f8403416db004fed7aef57355f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tiles/stonewall_right.png"
-dest_files=["res://.godot/imported/stonewall_right.png-1912631413c691ebf33dc257bd5ed21e.ctex"]
+source_file="res://assets/sprites/obsticles/buildings/aztec_temple.png"
+dest_files=["res://.godot/imported/aztec_temple.png-965193f8403416db004fed7aef57355f.ctex"]
 
 [params]
 

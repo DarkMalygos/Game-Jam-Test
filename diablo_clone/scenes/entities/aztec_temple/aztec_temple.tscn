@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccmc12ruoo7j6"]
+
+[ext_resource type="Texture2D" uid="uid://opcq52pvxvev" path="res://assets/sprites/obsticles/buildings/aztec_temple.png" id="1_mgyfc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nyr7b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mgyfc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AztecTemple" type="Node2D"]
+scale = Vector2(0.7, 0.7)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(12, -33)
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_nyr7b")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-148, 9)
+rotation = 0.010472
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(-0.999939, 0.0111723, -0.575394, 38.0088, 161.308, 116.205, 319.405, 34.4336, 318.969, -4.56396, 313.925, -8.50785, 313.858, -14.5075, 311.835, -16.485, 311.757, -23.4846, 267.525, -43.9917, 265.369, -57.9684, 251.303, -63.8117, 249.079, -83.7881, 161.593, -126.813, 97.966, -93.1003, 98.1, -81.1011, 76.2243, -69.856, 76.336, -59.8566, 73.3809, -55.8233, 72.4256, -51.8124, 7.78723, -19.0882, 8.84302, -14.0997, 4.85445, -13.0551, 4.955, -4.05561)
