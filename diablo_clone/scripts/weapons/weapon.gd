@@ -41,7 +41,7 @@ func is_ability_component_in_allowed_group(ability_component: AbilityComponent):
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_CHILD_ORDER_CHANGED:
-		var ability_count := 0
+		var current_ability_count := 0
 		for child in get_children():
 			if child is Ability:
 				if !is_ability_in_allowed_group(child):
@@ -49,11 +49,13 @@ func _notification(what: int) -> void:
 					print("Node '%s' is not in an allowed group!" % child.name)
 					return
 					
-				if ability_count >= max_ability_count:
+				if current_ability_count >= max_ability_count:
 					child.queue_free()
 					return
 					
-				ability_count += 1
+				current_ability_count += 1
+		
+		print("Current ability count: ", current_ability_count)
 				
 #func _on_child_entered_tree(node: Node) -> void:
 	#var node_class_name = node
