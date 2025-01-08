@@ -1,4 +1,4 @@
-extends ProgressBar
+extends TextureProgressBar
 
 @onready var player:= get_node("../../MainCharacter/CharacterBody2D")
 

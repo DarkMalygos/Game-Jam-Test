@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0xccs2ujgpvo"
-path="res://.godot/imported/wooden_cube.png-46a4a1a93f17a73c88551fb65d392b92.ctex"
+uid="uid://bpt2dilt7cj5g"
+path="res://.godot/imported/background_health_bar.png-5a08b3e9578b2f339ca304550de28e25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tiles/wooden_cube.png"
-dest_files=["res://.godot/imported/wooden_cube.png-46a4a1a93f17a73c88551fb65d392b92.ctex"]
+source_file="res://assets/sprites/entities/health_bar/background_health_bar.png"
+dest_files=["res://.godot/imported/background_health_bar.png-5a08b3e9578b2f339ca304550de28e25.ctex"]
 
 [params]
 

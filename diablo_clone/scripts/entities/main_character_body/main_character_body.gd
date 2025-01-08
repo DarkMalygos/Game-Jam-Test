@@ -9,7 +9,7 @@ signal health_changed()
 @onready var current_health: int = player_health
 
 func _ready() -> void:
-	speed = 70
+	speed = 100
 
 func _physics_process(delta: float) -> void:
 	#if not is_on_floor():

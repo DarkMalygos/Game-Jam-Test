@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5ibp20qoyhdy"
-path="res://.godot/imported/grass.png-7c06fc33ed0054d717c5531ff0d506d9.ctex"
+uid="uid://t8r0esnrqp5v"
+path="res://.godot/imported/progress_health_bar.png-514c5c7333535bdfe2fa5ace18e8c96e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tiles/grass.png"
-dest_files=["res://.godot/imported/grass.png-7c06fc33ed0054d717c5531ff0d506d9.ctex"]
+source_file="res://assets/sprites/entities/health_bar/progress_health_bar.png"
+dest_files=["res://.godot/imported/progress_health_bar.png-514c5c7333535bdfe2fa5ace18e8c96e.ctex"]
 
 [params]
 
