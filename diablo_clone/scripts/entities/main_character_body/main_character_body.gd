@@ -1,6 +1,12 @@
 extends EntityBody
 
+class_name MainCharacter
+
+signal health_changed()
+
 #@export var jump_velocity = -40.0
+@export var player_health := 100
+@onready var current_health: int = player_health
 
 func _ready() -> void:
 	speed = 70
@@ -14,9 +20,9 @@ func _physics_process(delta: float) -> void:
 		#velocity.y = jump_velocity
 	
 	if Input.is_action_just_pressed("ability_one"):
-		weapon.abilities[0].activate()
+		weapon.abilities[0].activate(self)
 	if Input.is_action_just_pressed("ability_two"):
-		weapon.abilities[1].activate()
+		weapon.abilities[1].activate(self)
 
 	var direction := Input.get_vector("movement_left", "movement_right", "movement_up", "movement_down")
 	if direction:
@@ -25,3 +31,7 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector2.ZERO
 
 	move_and_slide()
+
+func change_current_health(change_value: int):
+	current_health -= change_value
+	health_changed.emit()

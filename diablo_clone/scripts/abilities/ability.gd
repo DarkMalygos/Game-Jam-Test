@@ -3,6 +3,7 @@ class_name Ability
 
 @export var ability_name: String
 @export var cooldown := 2.0
+@export var self_damage = 10
 
 #var ability_components: Array[AbilityComponent] = []
 
@@ -16,10 +17,12 @@ var active := true
 			#
 	#print(ability_components)
 
-func activate():
+func activate(user: CharacterBody2D):
 	if !active:
 		return
+	user.change_current_health(self_damage)
 		
+	print(name)
 	active = false
 
 func _process(delta: float) -> void:
@@ -30,3 +33,4 @@ func _process(delta: float) -> void:
 	
 	if cooldown_timer >= cooldown:
 		active = true
+		cooldown_timer = 0

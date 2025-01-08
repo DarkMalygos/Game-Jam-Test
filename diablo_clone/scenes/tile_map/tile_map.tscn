@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://dprx05im4l6o2"]
+[gd_scene load_steps=9 format=4 uid="uid://dprx05im4l6o2"]
 
 [ext_resource type="TileSet" uid="uid://bsprh60fd27g5" path="res://resources/tile_sets/iso_tileset.tres" id="1_lep4a"]
 [ext_resource type="Script" path="res://scripts/tiles/ground_layer.gd" id="2_kb2qv"]
 [ext_resource type="PackedScene" uid="uid://ccmc12ruoo7j6" path="res://scenes/obsticles/buildings/aztec_temple.tscn" id="3_03mql"]
 [ext_resource type="PackedScene" uid="uid://bakqliauqbu77" path="res://scenes/entities/main_character/main_character.tscn" id="4_rqk01"]
 [ext_resource type="PackedScene" uid="uid://26l1n6bqpmso" path="res://scenes/obsticles/lights/torch_group.tscn" id="5_v6mec"]
+[ext_resource type="Script" path="res://scripts/entities/health_bar.gd" id="6_37vq8"]
 
 [sub_resource type="Gradient" id="Gradient_uitbr"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -46,3 +47,15 @@ position = Vector2(15, -31)
 position = Vector2(-209, 2)
 
 [node name="TorchGroup" parent="." instance=ExtResource("5_v6mec")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+offset_right = 75.0
+grow_vertical = 0
+value = 100.0
+script = ExtResource("6_37vq8")

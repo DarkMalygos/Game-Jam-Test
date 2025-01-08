@@ -4,6 +4,8 @@ var allowed_groups = [
 	"ability_component"
 ]
 
+var abilities: Array[Ability] = []
+
 func _ready() -> void:
 	var ability = preload("res://scenes/abilities/ability.tscn").instantiate()
 	add_ability(ability)
@@ -17,6 +19,8 @@ func add_ability(ability: Ability):
 		print("Ability '%s' is not in an allowed group!" % ability.name)
 		return
 		
+	abilities.append(ability)
+	add_child(ability)
 	print("Ability '%s' succesfully added" % ability.name)
 
 func is_ability_in_allowed_group(ability: Ability):

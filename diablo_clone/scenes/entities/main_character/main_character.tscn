@@ -7,6 +7,7 @@
 
 [node name="CharacterBody2D" parent="." index="0"]
 script = ExtResource("2_uxssg")
+player_health = 100
 
 [node name="AnimatedSprite2D" parent="CharacterBody2D" index="0"]
 position = Vector2(304, 146)
