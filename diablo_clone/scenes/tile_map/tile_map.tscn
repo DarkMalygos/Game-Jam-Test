@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://bsprh60fd27g5" path="res://resources/tile_sets/iso_tileset.tres" id="1_lep4a"]
 [ext_resource type="Script" path="res://scripts/tiles/ground_layer.gd" id="2_kb2qv"]
-[ext_resource type="PackedScene" path="res://scenes/obsticles/buildings/aztec_temple.tscn" id="3_03mql"]
+[ext_resource type="PackedScene" uid="uid://ccmc12ruoo7j6" path="res://scenes/obsticles/buildings/aztec_temple.tscn" id="3_03mql"]
 [ext_resource type="PackedScene" uid="uid://bakqliauqbu77" path="res://scenes/entities/main_character/main_character.tscn" id="4_rqk01"]
 [ext_resource type="PackedScene" uid="uid://26l1n6bqpmso" path="res://scenes/obsticles/lights/torch_group.tscn" id="5_v6mec"]
 
