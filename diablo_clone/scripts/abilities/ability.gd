@@ -1,7 +1,32 @@
-extends Resource
+extends Node2D
 class_name Ability
 
-@export var name: String
+@export var ability_name: String
+@export var cooldown := 2.0
+
+#var ability_components: Array[AbilityComponent] = []
+
+var cooldown_timer := 0.0
+var active := true
+
+#func _ready() -> void:
+	#for node in get_children():
+		#if node == AbilityComponent:
+			#ability_components.append(node)
+			#
+	#print(ability_components)
 
 func activate():
-	print(name)
+	if !active:
+		return
+		
+	active = false
+
+func _process(delta: float) -> void:
+	if active:
+		return
+	
+	cooldown_timer += delta
+	
+	if cooldown_timer >= cooldown:
+		active = true

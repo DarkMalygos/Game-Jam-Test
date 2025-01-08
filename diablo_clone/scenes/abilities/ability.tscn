@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://csujn8nl3qiak"]
+
+[ext_resource type="Script" path="res://scripts/abilities/ability.gd" id="1_ayv76"]
+[ext_resource type="PackedScene" uid="uid://dani41a6h0rhc" path="res://scenes/abilities/ability_components/ability_component.tscn" id="2_v1dr4"]
+
+[node name="Ability" type="Node2D"]
+script = ExtResource("1_ayv76")
+
+[node name="ability_component" parent="." instance=ExtResource("2_v1dr4")]
