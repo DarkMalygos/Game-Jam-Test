@@ -58,4 +58,4 @@ ability_two={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.0907811, 0.0909589, 0.137899, 1)
+environment/defaults/default_clear_color=Color(0.0525128, 0.155287, 0.19262, 1)

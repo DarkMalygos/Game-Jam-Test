@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=27 format=3 uid="uid://bsprh60fd27g5"]
+[gd_resource type="TileSet" load_steps=29 format=3 uid="uid://bsprh60fd27g5"]
 
 [ext_resource type="Texture2D" uid="uid://csnl4dp1q1uc3" path="res://assets/sprites/tiles/iso_tileset.png" id="1_mftfq"]
 [ext_resource type="Texture2D" uid="uid://5ibp20qoyhdy" path="res://assets/sprites/tiles/grass.png" id="2_15670"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://0xccs2ujgpvo" path="res://assets/sprites/tiles/wooden_cube.png" id="3_d3rw0"]
 [ext_resource type="Texture2D" uid="uid://cjrcryh2f0y2r" path="res://assets/sprites/tiles/ground_plant.png" id="4_6247n"]
 [ext_resource type="Texture2D" uid="uid://qef8i8xh3fpr" path="res://assets/sprites/tiles/tree.png" id="4_g4xao"]
+[ext_resource type="Texture2D" uid="uid://pbkau3xldxlu" path="res://assets/sprites/tiles/wood_holder.png" id="4_oyurt"]
 [ext_resource type="Texture2D" uid="uid://b7vc85f3kayo6" path="res://assets/sprites/tiles/monkey_tree.png" id="5_6oau2"]
 [ext_resource type="Texture2D" uid="uid://kmr4mlbl264h" path="res://assets/sprites/tiles/stone_tileset.png" id="5_1068n"]
 [ext_resource type="Texture2D" uid="uid://d0slwjvt2l786" path="res://assets/sprites/tiles/stonewall_tileset.png" id="6_imecu"]
@@ -47,6 +48,12 @@ texture = ExtResource("3_d3rw0")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8xdgp"]
+texture = ExtResource("4_oyurt")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -4)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lexii"]
 texture = ExtResource("4_6247n")
@@ -158,3 +165,4 @@ sources/5 = SubResource("TileSetAtlasSource_lhr2e")
 sources/6 = SubResource("TileSetAtlasSource_3o4xt")
 sources/12 = SubResource("TileSetAtlasSource_lexii")
 sources/13 = SubResource("TileSetAtlasSource_upo68")
+sources/11 = SubResource("TileSetAtlasSource_8xdgp")
