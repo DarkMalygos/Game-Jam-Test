@@ -4,4 +4,5 @@
 
 [resource]
 script = ExtResource("1_l1l0v")
-name = "Ability base class"
+ability_name = "Ability base class"
+cooldown = 2.0
