@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1g7xg68ticof"]
+[gd_scene load_steps=6 format=3 uid="uid://b1g7xg68ticof"]
 
 [ext_resource type="PackedScene" uid="uid://csujn8nl3qiak" path="res://scenes/abilities/ability.tscn" id="1_wlo52"]
 [ext_resource type="Script" path="res://scripts/abilities/fireball_ability.gd" id="2_3yedj"]
 [ext_resource type="PackedScene" uid="uid://ctxeala4uin4s" path="res://scenes/abilities/ability_components/damage_component.tscn" id="3_vuf3d"]
+[ext_resource type="PackedScene" uid="uid://cy2jelaiiaj6q" path="res://scenes/abilities/ability_components/aoe_component.tscn" id="4_3ihxn"]
+[ext_resource type="Script" path="res://scripts/abilities/ability_components/aoe_component.gd" id="4_quj0l"]
 
 [node name="FireballAbility" instance=ExtResource("1_wlo52")]
 script = ExtResource("2_3yedj")
 
 [node name="DamageComponent" parent="." index="0" instance=ExtResource("3_vuf3d")]
+
+[node name="AoEComponent" parent="." index="1" instance=ExtResource("4_3ihxn")]
+script = ExtResource("4_quj0l")
+radius = 5

@@ -35,3 +35,4 @@ func _physics_process(delta: float) -> void:
 func change_current_health(change_value: int):
 	current_health -= change_value
 	health_changed.emit()
+	

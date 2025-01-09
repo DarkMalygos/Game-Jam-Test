@@ -13,5 +13,5 @@ player_health = 100
 position = Vector2(0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" index="3"]
-zoom = Vector2(4, 4)
+zoom = Vector2(6, 6)
 position_smoothing_enabled = true

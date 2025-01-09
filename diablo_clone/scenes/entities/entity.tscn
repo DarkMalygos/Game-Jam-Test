@@ -18,7 +18,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_a47sp"]
 
 [node name="Entity" type="Node2D"]
-scale = Vector2(0.125, 0.125)
+scale = Vector2(0.3, 0.3)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_1p27h")
