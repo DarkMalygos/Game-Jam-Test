@@ -20,9 +20,9 @@ func _physics_process(delta: float) -> void:
 		#velocity.y = jump_velocity
 	
 	if Input.is_action_just_pressed("ability_one"):
-		weapon.abilities[0].activate(self)
+		weapon.activate(0, self)
 	if Input.is_action_just_pressed("ability_two"):
-		weapon.abilities[1].activate(self)
+		weapon.activate(1, self)
 
 	var direction := Input.get_vector("movement_left", "movement_right", "movement_up", "movement_down")
 	if direction:

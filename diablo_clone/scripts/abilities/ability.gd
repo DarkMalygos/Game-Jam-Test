@@ -1,7 +1,6 @@
 extends Node2D
 class_name Ability
 
-@export var ability_name := "Ability base class"
 @export var cooldown := 2.0
 @export var self_damage = 10
 
@@ -14,6 +13,7 @@ func _ready() -> void:
 		if node is AbilityComponent:
 			ability_components.append(node)
 
+#Override with super in mind
 func activate(user: CharacterBody2D):
 	if !active:
 		return
@@ -21,7 +21,6 @@ func activate(user: CharacterBody2D):
 		
 	print(name)
 	active = false
-	print(name)
 
 func _process(delta: float) -> void:
 	if active:
