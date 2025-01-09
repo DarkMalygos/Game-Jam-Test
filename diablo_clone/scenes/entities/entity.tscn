@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/entities/entity_body.gd" id="1_1p27h"]
 [ext_resource type="Texture2D" uid="uid://qpbi27oxlxr" path="res://assets/sprites/entities/main_character/test_character.png" id="2_3s5q8"]
-[ext_resource type="PackedScene" uid="uid://ddu0bjt5tfdbf" path="res://scenes/weapons/weapon.tscn" id="3_xwbjv"]
+[ext_resource type="PackedScene" uid="uid://bp7wpc31kvew5" path="res://scenes/weapons/staff.tscn" id="3_pgdd4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tv786"]
 animations = [{
@@ -30,4 +30,4 @@ sprite_frames = SubResource("SpriteFrames_tv786")
 position = Vector2(0, 40)
 shape = SubResource("CircleShape2D_a47sp")
 
-[node name="Weapon" parent="CharacterBody2D" instance=ExtResource("3_xwbjv")]
+[node name="Staff" parent="CharacterBody2D" instance=ExtResource("3_pgdd4")]

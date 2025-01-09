@@ -9,16 +9,9 @@
 script = ExtResource("2_uxssg")
 player_health = 100
 
-[node name="AnimatedSprite2D" parent="CharacterBody2D" index="0"]
-position = Vector2(304, 146)
-
 [node name="CollisionShape2D" parent="CharacterBody2D" index="1"]
-position = Vector2(304, 187)
-
-[node name="Weapon" parent="CharacterBody2D" index="2"]
-position = Vector2(361, 115)
+position = Vector2(0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" index="3"]
-position = Vector2(304, 138)
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true

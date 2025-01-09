@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3 uid="uid://d3p66uwn1xiqa"]
-
-[ext_resource type="Script" path="res://scripts/abilities/ability.gd" id="1_l1l0v"]
-
-[resource]
-script = ExtResource("1_l1l0v")
-ability_name = "Ability base class"
-cooldown = 2.0

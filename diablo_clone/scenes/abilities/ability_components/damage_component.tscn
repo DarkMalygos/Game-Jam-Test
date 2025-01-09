@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctxeala4uin4s"]
+
+[ext_resource type="PackedScene" uid="uid://dani41a6h0rhc" path="res://scenes/abilities/ability_components/ability_component.tscn" id="1_rvnjd"]
+[ext_resource type="Script" path="res://scripts/abilities/ability_components/damage_component.gd" id="2_b1ejd"]
+
+[node name="DamageComponent" instance=ExtResource("1_rvnjd")]
+script = ExtResource("2_b1ejd")

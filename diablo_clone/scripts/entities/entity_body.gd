@@ -3,4 +3,4 @@ class_name EntityBody
 
 @export var speed := 40
 
-@onready var weapon = $Weapon
+@onready var weapon = $Staff

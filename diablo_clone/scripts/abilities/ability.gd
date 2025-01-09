@@ -13,14 +13,17 @@ func _ready() -> void:
 		if node is AbilityComponent:
 			ability_components.append(node)
 
-#Override with super in mind
-func activate(user: CharacterBody2D):
+func try_activate(user: CharacterBody2D):
 	if !active:
 		return
-	user.change_current_health(self_damage)
 		
-	print(name)
+	user.change_current_health(self_damage)
 	active = false
+	activate(user)
+
+##Override this in child
+func activate(user: CharacterBody2D):
+	pass
 
 func _process(delta: float) -> void:
 	if active:

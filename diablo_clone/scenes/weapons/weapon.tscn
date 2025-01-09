@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddu0bjt5tfdbf"]
+[gd_scene load_steps=4 format=3 uid="uid://ddu0bjt5tfdbf"]
 
 [ext_resource type="Script" path="res://scripts/weapons/weapon.gd" id="1_gw7ab"]
 [ext_resource type="Texture2D" uid="uid://b8gn6cmw2hml0" path="res://assets/sprites/weapons/staff.png" id="1_vkl58"]
-[ext_resource type="PackedScene" uid="uid://csujn8nl3qiak" path="res://scenes/abilities/ability.tscn" id="3_nhrlq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8r6kd"]
 animations = [{
@@ -26,9 +25,3 @@ sprite_frames = SubResource("SpriteFrames_8r6kd")
 
 [node name="SpawnPoint" type="Node2D" parent="."]
 position = Vector2(-107, -81)
-
-[node name="Ability" parent="." instance=ExtResource("3_nhrlq")]
-
-[node name="Ability2" parent="." instance=ExtResource("3_nhrlq")]
-
-[node name="Ability3" parent="." instance=ExtResource("3_nhrlq")]

@@ -1,23 +1,29 @@
-
+##When attaching a script with @tool in it reattach it
 @tool
 extends Node2D
+class_name Weapon
 
-@export var min_ability_count := 3
-@export var max_ability_count := 6
-
-var allowed_ability_components = [
-	AbilityComponent
-]
+#Don't change these:
+@export_group("Ability count")
+@export var minimum := 3
+@export var maximum := 6
+@export var current := 0:
+	get:
+		return _current_ability_count
+		
+@export var allowed_ability_components: Array[String] = []
+		
+var _current_ability_count:= 0
 var _abilities: Array[Ability] = []
 		
-func _ready() -> void:
+func _ready() -> void:	
 	if !Engine.is_editor_hint():
 		for child in get_children():
 			if child is Ability:
 				_abilities.append(child)
 		
-		if _abilities.size() < min_ability_count:
-			print("Missing abilities (minimum ability count: %d, current ability count: %d)" % [min_ability_count, _abilities.size()])
+		if _abilities.size() < minimum:
+			print("Missing abilities (minimum ability count: %d, current ability count: %d)" % [minimum, _abilities.size()])
 		
 func activate(index: int, user: CharacterBody2D):
 	if !Engine.is_editor_hint():
@@ -25,7 +31,7 @@ func activate(index: int, user: CharacterBody2D):
 			print("Ability not assigned to this input")
 			return
 		
-		_abilities[index].activate(user)
+		_abilities[index].try_activate(user)
 
 func is_ability_in_allowed_group(ability: Ability):
 	var allowed = false
@@ -36,26 +42,26 @@ func is_ability_in_allowed_group(ability: Ability):
 			
 func is_ability_component_in_allowed_group(ability_component: AbilityComponent):
 	for allowed_ability_component in allowed_ability_components:
-		if typeof(ability_component) == typeof(allowed_ability_component):
+		if ability_component.name == allowed_ability_component:
 			return true
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_CHILD_ORDER_CHANGED:
-		var current_ability_count := 0
+		_current_ability_count = 0
 		for child in get_children():
 			if child is Ability:
 				if !is_ability_in_allowed_group(child):
 					child.queue_free()
-					print("Node '%s' is not in an allowed group!" % child.name)
+					print("Node '%s' is not in an allowed ability components!" % child.name)
 					return
 					
-				if current_ability_count >= max_ability_count:
+				if _current_ability_count >= maximum:
 					child.queue_free()
 					return
 					
-				current_ability_count += 1
+				_current_ability_count+= 1
 		
-		print("Current ability count: ", current_ability_count)
+		
 				
 #func _on_child_entered_tree(node: Node) -> void:
 	#var node_class_name = node
