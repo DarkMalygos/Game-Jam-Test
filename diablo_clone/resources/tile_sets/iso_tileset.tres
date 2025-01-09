@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=25 format=3 uid="uid://bsprh60fd27g5"]
+[gd_resource type="TileSet" load_steps=27 format=3 uid="uid://bsprh60fd27g5"]
 
 [ext_resource type="Texture2D" uid="uid://csnl4dp1q1uc3" path="res://assets/sprites/tiles/iso_tileset.png" id="1_mftfq"]
 [ext_resource type="Texture2D" uid="uid://d1uuubjiy2ppw" path="res://assets/sprites/tiles/water.png" id="3_2vv5t"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://kmr4mlbl264h" path="res://assets/sprites/tiles/stone_tileset.png" id="5_1068n"]
 [ext_resource type="Texture2D" uid="uid://d0slwjvt2l786" path="res://assets/sprites/tiles/stonewall_tileset.png" id="6_imecu"]
 [ext_resource type="Texture2D" uid="uid://c84oftb5nbfi3" path="res://assets/sprites/tiles/stone_tileset_wall.png" id="6_ioti1"]
+[ext_resource type="Texture2D" uid="uid://c6gsk3mpmnqtg" path="res://assets/sprites/entities/animals/golden_poison_frog.png" id="6_vq6m7"]
 [ext_resource type="Texture2D" uid="uid://cvvidp5jklpcy" path="res://assets/sprites/tiles/wood_plank_tileset.png" id="7_3wecr"]
 [ext_resource type="Texture2D" uid="uid://ctdfofeaw8jhy" path="res://assets/sprites/tiles/grass_set.png" id="7_mb30r"]
 [ext_resource type="Texture2D" uid="uid://bowdyh7ri1nh0" path="res://assets/sprites/tiles/palm_trree.png" id="8_bp5wv"]
@@ -57,6 +58,11 @@ texture_region_size = Vector2i(27, 16)
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_upo68"]
 texture = ExtResource("5_6oau2")
 texture_region_size = Vector2i(40, 42)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gwal"]
+texture = ExtResource("6_vq6m7")
+texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lavw7"]
@@ -150,3 +156,4 @@ sources/12 = SubResource("TileSetAtlasSource_lexii")
 sources/13 = SubResource("TileSetAtlasSource_upo68")
 sources/11 = SubResource("TileSetAtlasSource_8xdgp")
 sources/1 = SubResource("TileSetAtlasSource_x4lyg")
+sources/2 = SubResource("TileSetAtlasSource_8gwal")
