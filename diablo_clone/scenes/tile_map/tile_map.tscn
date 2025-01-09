@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dprx05im4l6o2"]
+[gd_scene load_steps=14 format=4 uid="uid://dprx05im4l6o2"]
 
 [ext_resource type="TileSet" uid="uid://bsprh60fd27g5" path="res://resources/tile_sets/iso_tileset.tres" id="1_lep4a"]
 [ext_resource type="Script" path="res://scripts/tiles/ground_layer.gd" id="2_kb2qv"]
@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bakqliauqbu77" path="res://scenes/entities/main_character/main_character.tscn" id="4_rqk01"]
 [ext_resource type="PackedScene" uid="uid://26l1n6bqpmso" path="res://scenes/obsticles/lights/torch_group.tscn" id="5_v6mec"]
 [ext_resource type="Script" path="res://scripts/entities/health_bar.gd" id="6_37vq8"]
-[ext_resource type="PackedScene" path="res://scenes/obsticles/lights/torch_group_2.tscn" id="6_njlu5"]
+[ext_resource type="PackedScene" uid="uid://n366fhny4shu" path="res://scenes/obsticles/lights/torch_group_2.tscn" id="6_njlu5"]
 [ext_resource type="Texture2D" uid="uid://bpt2dilt7cj5g" path="res://assets/sprites/entities/health_bar/background_health_bar.png" id="7_6q3v7"]
-[ext_resource type="PackedScene" path="res://scenes/obsticles/lights/torch_group_3.tscn" id="7_y4uci"]
+[ext_resource type="PackedScene" uid="uid://qkmcv2w7ijyv" path="res://scenes/obsticles/lights/torch_group_3.tscn" id="7_y4uci"]
 [ext_resource type="Texture2D" uid="uid://t8r0esnrqp5v" path="res://assets/sprites/entities/health_bar/progress_health_bar.png" id="8_fuwb8"]
 [ext_resource type="PackedScene" uid="uid://dx3chiiktgwrs" path="res://scenes/obsticles/lights/torches_on_lands.tscn" id="11_d37wg"]
 
@@ -58,9 +58,6 @@ position = Vector2(-615, 73)
 [node name="TorchGroup3" parent="." instance=ExtResource("7_y4uci")]
 
 [node name="TorchesOnLands" parent="." instance=ExtResource("11_d37wg")]
-
-[node name="TorchBeforeJungle" parent="." instance=ExtResource("9_82pml")]
-position = Vector2(-79, -318)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
