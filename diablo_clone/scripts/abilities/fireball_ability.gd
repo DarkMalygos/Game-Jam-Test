@@ -5,5 +5,6 @@ func activate(user: CharacterBody2D, group: String, target_position: Vector2):
 	$RangedComponent.fly_projectile(group, target_position, projectile)
 	projectile.hit_object_collision.connect(_on_hit_object_collision)
 
-func _on_hit_object_collision(target: CharacterBody2D):
+func _on_hit_object_collision(hit_object: HitObject, target: CharacterBody2D):
 	$DamageComponent.deal_damage(target)
+	hit_object.queue_free()

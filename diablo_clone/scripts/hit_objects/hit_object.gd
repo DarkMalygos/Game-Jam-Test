@@ -10,4 +10,4 @@ func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_inde
 	if !target.is_in_group(group):
 		return
 		
-	hit_object_collision.emit(target)
+	hit_object_collision.emit(self, target)

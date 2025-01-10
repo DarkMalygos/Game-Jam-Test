@@ -1,15 +1,9 @@
 extends EntityBody
-
-class_name MainCharacter
+class_name MainCharacterBody
 
 signal health_changed()
 
 #@export var jump_velocity = -40.0
-@export var player_health := 100
-@onready var current_health: int = player_health
-
-func _ready() -> void:
-	speed = 100
 
 func _physics_process(delta: float) -> void:
 	#if not is_on_floor():
@@ -19,9 +13,9 @@ func _physics_process(delta: float) -> void:
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		#velocity.y = jump_velocity
 	
-	if Input.is_action_just_pressed("ability_one"):
+	if Input.is_action_pressed("ability_one"):
 		weapon.activate(0, self, "enemy", get_global_mouse_position())
-	if Input.is_action_just_pressed("ability_two"):
+	if Input.is_action_pressed("ability_two"):
 		weapon.activate(1, self, "enemy", get_global_mouse_position())
 
 	var direction := Input.get_vector("movement_left", "movement_right", "movement_up", "movement_down")
@@ -32,8 +26,5 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-func reduce_current_health(change_value: int):
-	current_health -= change_value
+func reduce_current_health(amount: float):
 	health_changed.emit()
-
-	print(current_health)

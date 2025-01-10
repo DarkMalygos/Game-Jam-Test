@@ -18,15 +18,15 @@ func _process(delta: float) -> void:
 	if cooldown_timer >= cooldown:
 		active = true
 		cooldown_timer = 0
+		print(name, " is active")
 
 func try_activate(user: CharacterBody2D, group: String, target_position: Vector2):
 	if !active:
 		return
 		
-	user.reduce_current_health(self_damage)
+	user.try_reduce_current_health(self_damage)
 	active = false
 	activate(user, group, target_position)
 
-##Override this in child
 func activate(user: CharacterBody2D, group: String, target_position: Vector2):
-	pass
+	push_error("abstract method")

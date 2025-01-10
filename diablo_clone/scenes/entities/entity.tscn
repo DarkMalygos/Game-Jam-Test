@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0w4pmjhnu7ml"]
+[gd_scene load_steps=6 format=3 uid="uid://b0w4pmjhnu7ml"]
 
 [ext_resource type="Script" path="res://scripts/entities/entity_body.gd" id="1_1p27h"]
 [ext_resource type="Texture2D" uid="uid://qpbi27oxlxr" path="res://assets/sprites/entities/main_character/test_character.png" id="2_3s5q8"]
-[ext_resource type="PackedScene" uid="uid://bp7wpc31kvew5" path="res://scenes/weapons/staff.tscn" id="3_pgdd4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tv786"]
 animations = [{
@@ -16,17 +15,18 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a47sp"]
-radius = 6.66667
+radius = 3.33333
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_urj1w"]
+height = 20.0
 
 [node name="Entity" type="Node2D"]
 scale = Vector2(0.3, 0.3)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_1p27h")
-
-[node name="Staff" parent="CharacterBody2D" instance=ExtResource("3_pgdd4")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_tv786")

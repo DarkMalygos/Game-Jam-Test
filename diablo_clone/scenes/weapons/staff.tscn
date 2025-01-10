@@ -6,15 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://be6nekgyxgxi4" path="res://scenes/abilities/heal_ability.tscn" id="4_npo1d"]
 
 [node name="Staff" instance=ExtResource("1_oxh8u")]
-position = Vector2(23.3333, -3.33333)
 script = ExtResource("2_6p3mt")
 minimum = 1
 maximum = 3
 current = 2
 allowed_ability_components = Array[String](["RangedComponent", "DamageComponent", "SingleTargetComponent", "HealComponent"])
-
-[node name="SpawnPoint" parent="." index="1"]
-position = Vector2(-40, -120)
 
 [node name="FireballAbility" parent="." index="2" instance=ExtResource("3_nr20n")]
 

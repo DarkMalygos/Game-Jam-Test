@@ -1,17 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://bakqliauqbu77"]
+[gd_scene load_steps=4 format=3 uid="uid://bakqliauqbu77"]
 
 [ext_resource type="PackedScene" uid="uid://b0w4pmjhnu7ml" path="res://scenes/entities/entity.tscn" id="1_1s8lj"]
 [ext_resource type="Script" path="res://scripts/entities/main_character_body/main_character_body.gd" id="2_uxssg"]
+[ext_resource type="PackedScene" uid="uid://bp7wpc31kvew5" path="res://scenes/weapons/staff.tscn" id="3_i4t74"]
 
 [node name="MainCharacter" instance=ExtResource("1_1s8lj")]
 
 [node name="CharacterBody2D" parent="." index="0" groups=["main_character"]]
 script = ExtResource("2_uxssg")
-player_health = 100
-
-[node name="CollisionShape2D" parent="CharacterBody2D" index="2"]
-position = Vector2(-3.33333, 23.3333)
+speed = 100
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" index="3"]
 zoom = Vector2(6, 6)
 position_smoothing_enabled = true
+
+[node name="Staff" parent="CharacterBody2D" index="4" instance=ExtResource("3_i4t74")]
