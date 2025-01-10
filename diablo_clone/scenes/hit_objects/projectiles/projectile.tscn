@@ -5,3 +5,7 @@
 
 [node name="Projectile" instance=ExtResource("1_tyfjc")]
 script = ExtResource("2_pif3l")
+
+[node name="Area2D" parent="." index="1"]
+collision_layer = 2
+collision_mask = 2

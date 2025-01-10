@@ -23,7 +23,7 @@ func try_activate(user: CharacterBody2D, group: String, target_position: Vector2
 	if !active:
 		return
 		
-	user.change_current_health(self_damage)
+	user.reduce_current_health(self_damage)
 	active = false
 	activate(user, group, target_position)
 
