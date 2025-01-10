@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckj7kwprp3pgq"]
+
+[ext_resource type="PackedScene" uid="uid://dani41a6h0rhc" path="res://scenes/abilities/ability_components/ability_component.tscn" id="1_ynbxu"]
+[ext_resource type="Script" path="res://scripts/abilities/ability_components/single_target_component.gd" id="2_epgs5"]
+
+[node name="SingleTargetComponent" instance=ExtResource("1_ynbxu")]
+script = ExtResource("2_epgs5")

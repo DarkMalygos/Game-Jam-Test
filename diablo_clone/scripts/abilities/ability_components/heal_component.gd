@@ -5,4 +5,3 @@ class_name HealComponent
 
 func single_target_heal(user: CharacterBody2D):
 	user.change_current_health(-heal)
-	print(heal)

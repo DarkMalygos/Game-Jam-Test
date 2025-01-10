@@ -14,24 +14,20 @@ class_name Weapon
 @export var allowed_ability_components: Array[String] = []
 		
 var _current_ability_count:= 0
-var _abilities: Array[Ability] = []
 		
-func _ready() -> void:	
+func _ready() -> void:
 	if !Engine.is_editor_hint():
-		for child in get_children():
-			if child is Ability:
-				_abilities.append(child)
+		var ability_count = _get_abilities().size()
+		if ability_count < minimum:
+			print("Missing abilities (minimum ability count: %d, current ability count: %d)" % [minimum, ability_count])
 		
-		if _abilities.size() < minimum:
-			print("Missing abilities (minimum ability count: %d, current ability count: %d)" % [minimum, _abilities.size()])
-		
-func activate(index: int, user: CharacterBody2D):
+func activate(index: int, user: CharacterBody2D, group: String, target_position: Vector2):
 	if !Engine.is_editor_hint():
-		if _abilities.size() <= index:
+		if _get_abilities().size() <= index:
 			print("Ability not assigned to this input")
 			return
 		
-		_abilities[index].try_activate(user)
+		_get_abilities()[index].try_activate(user, group, target_position)
 
 func is_ability_in_allowed_group(ability: Ability):
 	var allowed = false
@@ -52,17 +48,23 @@ func _notification(what: int) -> void:
 			if child is Ability:
 				if !is_ability_in_allowed_group(child):
 					child.queue_free()
-					print("Node '%s' is not in an allowed ability components!" % child.name)
+					print(child.name, "-s components are not in allowed ability components! allowed: ", allowed_ability_components)
 					return
 					
 				if _current_ability_count >= maximum:
 					child.queue_free()
 					return
 					
-				_current_ability_count+= 1
+				_current_ability_count += 1	
+
+func _get_abilities():
+	var current_abilities: Array[Ability] = []
+	for child in get_children():
+		if child is Ability:
+			current_abilities.append(child)
+			
+	return current_abilities
 		
-		
-				
 #func _on_child_entered_tree(node: Node) -> void:
 	#var node_class_name = node
 	#print(node_class_name)

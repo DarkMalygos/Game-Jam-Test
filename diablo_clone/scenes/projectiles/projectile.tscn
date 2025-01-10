@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbtps2ggbe8je"]
+
+[ext_resource type="Texture2D" uid="uid://dhl54hefromtr" path="res://assets/sprites/obsticles/lights/torch_light.png" id="1_ieaaf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s0xfx"]
+radius = 15.0
+
+[node name="Projectile" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ieaaf")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_s0xfx")

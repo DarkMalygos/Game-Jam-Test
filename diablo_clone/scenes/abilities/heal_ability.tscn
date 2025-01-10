@@ -10,3 +10,4 @@ cooldown = 5.0
 self_damage = 0
 
 [node name="HealComponent" parent="." index="0" instance=ExtResource("3_q0rr2")]
+heal = 1

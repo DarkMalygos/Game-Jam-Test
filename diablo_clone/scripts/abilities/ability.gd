@@ -4,26 +4,10 @@ class_name Ability
 @export var cooldown := 2.0
 @export var self_damage := 10
 
-var ability_components: Array[AbilityComponent] = []
+@onready var spawn_point := get_node("../SpawnPoint")
+
 var cooldown_timer := 0.0
 var active := true
-
-func _ready() -> void:
-	for node in get_children():
-		if node is AbilityComponent:
-			ability_components.append(node)
-
-func try_activate(user: CharacterBody2D):
-	if !active:
-		return
-		
-	user.change_current_health(self_damage)
-	active = false
-	activate(user)
-
-##Override this in child
-func activate(user: CharacterBody2D):
-	pass
 
 func _process(delta: float) -> void:
 	if active:
@@ -34,3 +18,15 @@ func _process(delta: float) -> void:
 	if cooldown_timer >= cooldown:
 		active = true
 		cooldown_timer = 0
+
+func try_activate(user: CharacterBody2D, group: String, target_position: Vector2):
+	if !active:
+		return
+		
+	user.change_current_health(self_damage)
+	active = false
+	activate(user, group, target_position)
+
+##Override this in child
+func activate(user: CharacterBody2D, group: String, target_position: Vector2):
+	pass

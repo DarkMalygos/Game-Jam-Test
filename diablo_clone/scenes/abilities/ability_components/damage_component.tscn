@@ -5,3 +5,4 @@
 
 [node name="DamageComponent" instance=ExtResource("1_rvnjd")]
 script = ExtResource("2_b1ejd")
+damage = 10

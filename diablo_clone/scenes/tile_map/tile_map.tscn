@@ -21,6 +21,7 @@ width = 134
 fill = 1
 
 [node name="TileMap" type="Node2D"]
+position = Vector2(-769, 37)
 
 [node name="GroundLayer" type="TileMapLayer" parent="."]
 self_modulate = Color(0.497474, 0.497474, 0.497474, 1)

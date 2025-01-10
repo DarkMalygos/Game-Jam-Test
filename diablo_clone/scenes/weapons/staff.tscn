@@ -2,15 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://ddu0bjt5tfdbf" path="res://scenes/weapons/weapon.tscn" id="1_oxh8u"]
 [ext_resource type="Script" path="res://scripts/weapons/staff.gd" id="2_6p3mt"]
-[ext_resource type="PackedScene" uid="uid://b1g7xg68ticof" path="res://scenes/abilities/fireball_ability.tscn" id="3_yo7rk"]
-[ext_resource type="PackedScene" uid="uid://be6nekgyxgxi4" path="res://scenes/abilities/heal_ability.tscn" id="4_h5x3b"]
+[ext_resource type="PackedScene" uid="uid://b1g7xg68ticof" path="res://scenes/abilities/fireball_ability.tscn" id="3_nr20n"]
+[ext_resource type="PackedScene" uid="uid://be6nekgyxgxi4" path="res://scenes/abilities/heal_ability.tscn" id="4_npo1d"]
 
 [node name="Staff" instance=ExtResource("1_oxh8u")]
+position = Vector2(23.3333, -3.33333)
 script = ExtResource("2_6p3mt")
+minimum = 1
+maximum = 3
 current = 2
-allowed_ability_components = Array[String](["DamageComponent", "AoEComponent", "HealComponent"])
+allowed_ability_components = Array[String](["RangedComponent", "DamageComponent", "SingleTargetComponent", "HealComponent"])
 
-[node name="FireballAbility" parent="." index="2" instance=ExtResource("3_yo7rk")]
+[node name="SpawnPoint" parent="." index="1"]
+position = Vector2(-40, -120)
 
-[node name="HealAbility" parent="." index="3" instance=ExtResource("4_h5x3b")]
-scale = Vector2(1, 1)
+[node name="FireballAbility" parent="." index="2" instance=ExtResource("3_nr20n")]
+
+[node name="HealAbility" parent="." index="3" instance=ExtResource("4_npo1d")]

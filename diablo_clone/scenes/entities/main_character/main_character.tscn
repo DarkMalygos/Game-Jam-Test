@@ -9,8 +9,11 @@
 script = ExtResource("2_uxssg")
 player_health = 100
 
-[node name="CollisionShape2D" parent="CharacterBody2D" index="1"]
-position = Vector2(0, 0)
+[node name="Staff" parent="CharacterBody2D" index="0"]
+position = Vector2(23.3333, -3.33333)
+
+[node name="CollisionShape2D" parent="CharacterBody2D" index="2"]
+position = Vector2(-3.33333, 23.3333)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" index="3"]
 zoom = Vector2(6, 6)

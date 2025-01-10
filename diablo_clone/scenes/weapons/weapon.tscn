@@ -15,13 +15,13 @@ animations = [{
 }]
 
 [node name="Weapon" type="Node2D"]
-position = Vector2(56, -32)
-scale = Vector2(0.2, 0.2)
+position = Vector2(23.3333, -3.33333)
+rotation = -0.120428
+scale = Vector2(0.1, 0.1)
 script = ExtResource("1_gw7ab")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-rotation = -0.698132
 sprite_frames = SubResource("SpriteFrames_8r6kd")
 
 [node name="SpawnPoint" type="Node2D" parent="."]
-position = Vector2(-107, -81)
+position = Vector2(-40, -120)

@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsjjog4vrdx0e"]
+
+[ext_resource type="PackedScene" uid="uid://bbtps2ggbe8je" path="res://scenes/projectiles/projectile.tscn" id="1_tyfjc"]
+[ext_resource type="Script" path="res://scripts/hit_objects/projectiles/projectile.gd" id="2_pif3l"]
+
+[node name="Projectile" instance=ExtResource("1_tyfjc")]
+script = ExtResource("2_pif3l")
