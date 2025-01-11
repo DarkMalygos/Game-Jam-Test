@@ -21,13 +21,13 @@ func _ready() -> void:
 		if ability_count < minimum:
 			print("Missing abilities (minimum ability count: %d, current ability count: %d)" % [minimum, ability_count])
 		
-func activate(index: int, user: CharacterBody2D, group: String, target_position: Vector2):
+func activate(index: int, user: CharacterBody2D, target_group: String, target_position: Vector2):
 	if !Engine.is_editor_hint():
 		if _get_abilities().size() <= index:
 			print("Ability not assigned to this input")
 			return
 		
-		_get_abilities()[index].try_activate(user, group, target_position)
+		_get_abilities()[index].try_activate(user, target_group, target_position)
 
 func is_ability_in_allowed_group(ability: Ability):
 	var allowed = false

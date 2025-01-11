@@ -18,7 +18,9 @@ animations = [{
 position = Vector2(303, -1)
 scale = Vector2(0.7, 0.7)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["obstacle"]]
+collision_layer = 3
+collision_mask = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
 self_modulate = Color(0.446777, 0.446777, 0.446777, 1)

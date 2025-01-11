@@ -20,13 +20,13 @@ func _process(delta: float) -> void:
 		cooldown_timer = 0
 		print(name, " is active")
 
-func try_activate(user: CharacterBody2D, group: String, target_position: Vector2):
+func try_activate(user: CharacterBody2D, target_group: String, target_position: Vector2):
 	if !active:
 		return
 		
 	user.try_reduce_current_health(self_damage)
 	active = false
-	activate(user, group, target_position)
+	activate(user, target_group, target_position)
 
-func activate(user: CharacterBody2D, group: String, target_position: Vector2):
+func activate(user: CharacterBody2D, target_group: String, target_position: Vector2):
 	push_error("abstract method")

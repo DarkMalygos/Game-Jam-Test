@@ -24,7 +24,7 @@ window/size/viewport_height=720
 
 enemy=""
 main_character=""
-wall=""
+obstacle=""
 
 [input]
 
