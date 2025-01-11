@@ -8,7 +8,9 @@ func activate(user: CharacterBody2D, target_group: String, target_position: Vect
 
 func _on_target_group_collision(hit_object: HitObject, target: CharacterBody2D):
 	$DamageComponent.deal_damage(target)
+	$AoEComponent.call_deferred("spawn_hit_object", preload("res://scenes/hit_objects/ao_e_hit_object.tscn"), target.global_position)
 	hit_object.queue_free()
 
 func _on_obstacle_collision(hit_object: HitObject):
+	$AoEComponent.call_deferred("spawn_hit_object", preload("res://scenes/hit_objects/ao_e_hit_object.tscn"), hit_object.position)
 	hit_object.queue_free()

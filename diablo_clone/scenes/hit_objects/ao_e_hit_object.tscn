@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcaiyarjww7va"]
+
+[ext_resource type="PackedScene" uid="uid://bbtps2ggbe8je" path="res://scenes/hit_objects/hit_object.tscn" id="1_vsurq"]
+[ext_resource type="Texture2D" uid="uid://b5be1nuk4rv11" path="res://assets/sprites/hit_objects/circle.png" id="2_ovl1c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ghpuf"]
+radius = 6.66667
+height = 20.0
+
+[node name="AoEHitObject" instance=ExtResource("1_vsurq")]
+scale = Vector2(1, 1)
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_ovl1c")
+
+[node name="Area2D" parent="." index="1"]
+rotation = 1.5708
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-6.66667, 2.91409e-07)
+shape = SubResource("CapsuleShape2D_ghpuf")

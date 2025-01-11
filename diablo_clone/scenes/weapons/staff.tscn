@@ -10,8 +10,8 @@ script = ExtResource("2_6p3mt")
 minimum = 1
 maximum = 3
 current = 2
-allowed_ability_components = Array[String](["RangedComponent", "DamageComponent", "SingleTargetComponent", "HealComponent"])
+allowed_ability_components = Array[String](["RangedComponent", "DamageComponent", "SingleTargetComponent", "HealComponent", "AoEComponent"])
 
-[node name="FireballAbility" parent="." index="2" instance=ExtResource("3_nr20n")]
+[node name="HealAbility" parent="." index="2" instance=ExtResource("4_npo1d")]
 
-[node name="HealAbility" parent="." index="3" instance=ExtResource("4_npo1d")]
+[node name="FireballAbility" parent="." index="3" instance=ExtResource("3_nr20n")]
