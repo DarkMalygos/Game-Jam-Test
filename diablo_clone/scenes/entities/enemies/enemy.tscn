@@ -37,3 +37,11 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_r0nf7")
 
 [node name="Staff" parent="CharacterBody2D" index="3" instance=ExtResource("4_p20yu")]
+
+[node name="HealthBar" type="ProgressBar" parent="CharacterBody2D" index="4"]
+offset_top = -30.0
+offset_right = 4.0
+offset_bottom = -3.0
+value = 100.0
+
+[connection signal="area_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]

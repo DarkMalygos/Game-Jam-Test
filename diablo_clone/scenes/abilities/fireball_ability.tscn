@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1g7xg68ticof"]
+[gd_scene load_steps=8 format=3 uid="uid://b1g7xg68ticof"]
 
 [ext_resource type="PackedScene" uid="uid://csujn8nl3qiak" path="res://scenes/abilities/ability.tscn" id="1_wlo52"]
 [ext_resource type="Script" path="res://scripts/abilities/fireball_ability.gd" id="2_3yedj"]
@@ -6,11 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://embuolrmjim4" path="res://scenes/abilities/ability_components/ranged_component.tscn" id="4_nu66l"]
 [ext_resource type="PackedScene" uid="uid://ckj7kwprp3pgq" path="res://scenes/abilities/ability_components/single_target_component.tscn" id="5_57sg6"]
 [ext_resource type="PackedScene" uid="uid://cy2jelaiiaj6q" path="res://scenes/abilities/ability_components/ao_e_component.tscn" id="6_1wpex"]
+[ext_resource type="PackedScene" uid="uid://d3hi15sn45s6b" path="res://scenes/abilities/ability_components/affliction_component.tscn" id="7_03l0s"]
 
 [node name="FireballAbility" instance=ExtResource("1_wlo52")]
 script = ExtResource("2_3yedj")
 cooldown = 1.0
-self_damage = 2
 
 [node name="RangedComponent" parent="." index="0" instance=ExtResource("4_nu66l")]
 
@@ -19,4 +19,5 @@ self_damage = 2
 [node name="DamageComponent" parent="." index="2" instance=ExtResource("4_1ra47")]
 
 [node name="AoEComponent" parent="." index="3" instance=ExtResource("6_1wpex")]
-life_time = 5.0
+
+[node name="AfflictionComponent" parent="." index="4" instance=ExtResource("7_03l0s")]

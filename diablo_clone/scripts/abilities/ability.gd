@@ -2,7 +2,7 @@ extends Node2D
 class_name Ability
 
 @export var cooldown := 2.0
-@export var self_damage := 10
+@export var self_damage := .5
 
 @onready var spawn_point := get_node("../SpawnPoint")
 

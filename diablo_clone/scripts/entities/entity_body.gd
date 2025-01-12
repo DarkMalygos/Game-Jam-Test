@@ -18,12 +18,11 @@ func _get_weapon():
 	print("Weapon missing on ", get_parent().name)
 	
 func try_reduce_current_health(amount: float):
-	if (current_health - amount) > max_health:
-		return
+	var test_amount := current_health - amount
 		
-	current_health -= amount
-	reduce_current_health(amount)
+	current_health = max(0, min(max_health, test_amount))
+	_reduce_current_health()
 
-func reduce_current_health(amount: float):
-	pass
-	#push_error("abstract method")
+func _reduce_current_health():
+	print(get_parent().name, ": ", current_health)
+	push_error("abstract method")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bcaiyarjww7va"]
+[gd_scene load_steps=5 format=3 uid="uid://bcaiyarjww7va"]
 
 [ext_resource type="PackedScene" uid="uid://bbtps2ggbe8je" path="res://scenes/hit_objects/hit_object.tscn" id="1_vsurq"]
-[ext_resource type="Texture2D" uid="uid://b5be1nuk4rv11" path="res://assets/sprites/hit_objects/circle.png" id="2_ovl1c"]
+[ext_resource type="Script" path="res://scripts/hit_objects/projectiles/ao_e_hit_object.gd" id="2_11v8l"]
+[ext_resource type="Texture2D" uid="uid://b5be1nuk4rv11" path="res://assets/sprites/hit_objects/ao_e.png" id="2_ovl1c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ghpuf"]
 radius = 6.66667
@@ -9,6 +10,7 @@ height = 20.0
 
 [node name="AoEHitObject" instance=ExtResource("1_vsurq")]
 scale = Vector2(1, 1)
+script = ExtResource("2_11v8l")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_ovl1c")
@@ -17,5 +19,6 @@ texture = ExtResource("2_ovl1c")
 rotation = 1.5708
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(-6.66667, 2.91409e-07)
 shape = SubResource("CapsuleShape2D_ghpuf")
+
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

@@ -5,4 +5,4 @@
 
 [node name="AoEComponent" instance=ExtResource("1_vv7qm")]
 script = ExtResource("2_k8opg")
-life_time = 5.0
+duration = 2.5

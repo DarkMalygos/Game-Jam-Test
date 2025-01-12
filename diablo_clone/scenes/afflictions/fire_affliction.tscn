@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxm647bi5l3w8"]
+
+[ext_resource type="PackedScene" uid="uid://jm6f376re42h" path="res://scenes/afflictions/affliction.tscn" id="1_1x772"]
+[ext_resource type="Script" path="res://scripts/afflictions/fire_affliction.gd" id="2_vvo4x"]
+
+[node name="FireAffliction" instance=ExtResource("1_1x772")]
+script = ExtResource("2_vvo4x")
+apply_time = 1.0

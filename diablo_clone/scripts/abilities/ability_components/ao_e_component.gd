@@ -1,24 +1,16 @@
 extends AbilityComponent
 class_name AoEComponent
 
-@export var life_time := 5.0
+signal hit_object_created
 
-###change this:
-#var current_life_time := 0.0
-#var hit_object: HitObject
+@export var duration := 2.5
 
-func spawn_hit_object(packed_hit_object: PackedScene, spawn_position: Vector2):
+func spawn_ao_e_hit_object(packed_hit_object: PackedScene, spawn_position: Vector2, target_group: String):
 	var hit_object = packed_hit_object.instantiate()
 	var tile_map = get_node("/root/main/TileMap")
 	tile_map.add_child(hit_object)
 	tile_map.move_child(hit_object, 1)
 	hit_object.global_position = spawn_position
-	return hit_object
-
-##and this:
-#func _process(delta: float) -> void:
-	#if current_life_time >= life_time:
-		#hit_object.queue_free()
-		#return
-#
-	#current_life_time += delta
+	hit_object.life_time = duration
+	hit_object.target_group = target_group
+	hit_object_created.emit(hit_object)

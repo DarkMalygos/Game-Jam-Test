@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3hi15sn45s6b"]
+
+[ext_resource type="PackedScene" uid="uid://dani41a6h0rhc" path="res://scenes/abilities/ability_components/ability_component.tscn" id="1_brwuq"]
+[ext_resource type="Script" path="res://scripts/abilities/ability_components/affliction_component.gd" id="2_ge03d"]
+
+[node name="AfflictionComponent" instance=ExtResource("1_brwuq")]
+script = ExtResource("2_ge03d")

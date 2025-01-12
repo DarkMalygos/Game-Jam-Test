@@ -26,5 +26,5 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-func reduce_current_health(amount: float):
+func _reduce_current_health():
 	health_changed.emit()
