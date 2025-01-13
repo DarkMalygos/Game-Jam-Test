@@ -5,3 +5,4 @@
 [node name="main" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource("1_tt5vc")]
+position = Vector2(-653, -9)

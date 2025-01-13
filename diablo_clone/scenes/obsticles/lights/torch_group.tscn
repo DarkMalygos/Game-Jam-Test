@@ -8,6 +8,7 @@
 position = Vector2(-288, -39)
 
 [node name="Torch2" parent="." instance=ExtResource("1_yg8qm")]
+visible = false
 position = Vector2(-32, -167)
 
 [node name="Torch3" parent="." instance=ExtResource("1_yg8qm")]

@@ -33,6 +33,7 @@ speed = 100
 
 [node name="AnimatedSprite2D" parent="CharacterBody2D" index="0"]
 sprite_frames = SubResource("SpriteFrames_ja7jk")
+animation = &"shoot"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" index="3"]
 zoom = Vector2(6, 6)
