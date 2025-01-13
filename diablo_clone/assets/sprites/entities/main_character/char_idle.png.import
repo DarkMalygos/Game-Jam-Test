@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v3bst2e5213l"
-path="res://.godot/imported/fire_ball.png-1713ec73f45b1094adae211cd2b96b8d.ctex"
+uid="uid://enf4v3r4ovcl"
+path="res://.godot/imported/char_idle.png-59ca4ea558766cc766da71f57c29448a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/hit_objects/fire_ball.png"
-dest_files=["res://.godot/imported/fire_ball.png-1713ec73f45b1094adae211cd2b96b8d.ctex"]
+source_file="res://assets/sprites/entities/main_character/char_idle.png"
+dest_files=["res://.godot/imported/char_idle.png-59ca4ea558766cc766da71f57c29448a.ctex"]
 
 [params]
 

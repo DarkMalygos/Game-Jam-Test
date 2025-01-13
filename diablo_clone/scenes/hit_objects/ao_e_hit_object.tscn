@@ -34,6 +34,7 @@ sprite_frames = SubResource("SpriteFrames_xaq3v")
 
 [node name="PointLight2D" type="PointLight2D" parent="." index="1"]
 position = Vector2(0, 3)
+scale = Vector2(0.8, 0.8)
 color = Color(1, 0.411765, 0.419608, 1)
 texture = ExtResource("5_q3fc7")
 

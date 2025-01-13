@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbtps2ggbe8je"]
+[gd_scene load_steps=6 format=3 uid="uid://bbtps2ggbe8je"]
 
 [ext_resource type="Script" path="res://scripts/hit_objects/hit_object.gd" id="1_33trh"]
-[ext_resource type="Texture2D" uid="uid://brmllx2i5gem8" path="res://assets/sprites/hit_objects/fire_ball.png" id="2_l6ix5"]
+[ext_resource type="Texture2D" uid="uid://v3bst2e5213l" path="res://assets/sprites/hit_objects/fire_ball.png" id="2_l6ix5"]
+[ext_resource type="Texture2D" uid="uid://dhl54hefromtr" path="res://assets/sprites/obsticles/lights/torch_light.png" id="3_clowr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dy233"]
 animations = [{
@@ -22,7 +23,15 @@ scale = Vector2(0.3, 0.3)
 script = ExtResource("1_33trh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -5)
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_dy233")
+
+[node name="PointLight2D" type="PointLight2D" parent="AnimatedSprite2D"]
+position = Vector2(-1, 5)
+scale = Vector2(0.5, 0.5)
+color = Color(1, 0.701961, 0.247059, 1)
+texture = ExtResource("3_clowr")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
