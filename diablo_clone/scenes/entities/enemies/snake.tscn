@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cd6ub4xuk3wl5"]
+[gd_scene load_steps=7 format=3 uid="uid://cd6ub4xuk3wl5"]
 
 [ext_resource type="PackedScene" uid="uid://gd08nut0n7l5" path="res://scenes/entities/enemies/enemy.tscn" id="1_u187e"]
 [ext_resource type="Script" path="res://scripts/entities/enemies/snake.gd" id="2_qbsv1"]
@@ -15,6 +15,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ih27"]
+height = 80.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5pl74"]
 radius = 6.66667
 height = 60.0
@@ -30,7 +33,9 @@ seperation_distance = 32.0
 sprite_frames = SubResource("SpriteFrames_q0fgx")
 
 [node name="CollisionShape2D" parent="CharacterBody2D" index="1"]
-position = Vector2(-10, 10)
+position = Vector2(20, 20)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_5ih27")
 
 [node name="CollisionShape2D" parent="CharacterBody2D/Area2D" index="0"]
 position = Vector2(-13.3333, 4.83169e-13)
