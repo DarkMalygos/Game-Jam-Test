@@ -24,6 +24,7 @@ func try_reduce_current_health(amount: float):
 	
 	if current_health == 0:
 		get_parent().queue_free()
+		#print("dead")
 		return
 		
 	_reduce_current_health()
