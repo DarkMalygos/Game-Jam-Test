@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://dprx05im4l6o2"]
+[gd_scene load_steps=17 format=4 uid="uid://dprx05im4l6o2"]
 
 [ext_resource type="TileSet" uid="uid://chai62qdkj712" path="res://resources/tile_sets/ground_layer.tres" id="1_cwxdo"]
 [ext_resource type="TileSet" uid="uid://bsprh60fd27g5" path="res://resources/tile_sets/obstacle_layer.tres" id="1_lep4a"]
@@ -11,7 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://bpt2dilt7cj5g" path="res://assets/sprites/entities/health_bar/background_health_bar.png" id="7_6q3v7"]
 [ext_resource type="PackedScene" uid="uid://qkmcv2w7ijyv" path="res://scenes/obsticles/lights/torch_group_3.tscn" id="7_y4uci"]
 [ext_resource type="Texture2D" uid="uid://t8r0esnrqp5v" path="res://assets/sprites/entities/health_bar/progress_health_bar.png" id="8_fuwb8"]
-[ext_resource type="PackedScene" uid="uid://iuvfuym156g6" path="res://scenes/entities/enemies/frog.tscn" id="10_08eqn"]
+[ext_resource type="PackedScene" path="res://scenes/entities/enemies/frog.tscn" id="10_08eqn"]
+[ext_resource type="PackedScene" uid="uid://cd6ub4xuk3wl5" path="res://scenes/entities/enemies/snake.tscn" id="10_26451"]
 [ext_resource type="PackedScene" uid="uid://dx3chiiktgwrs" path="res://scenes/obsticles/lights/torches_on_lands.tscn" id="11_d37wg"]
 
 [sub_resource type="Gradient" id="Gradient_uitbr"]
@@ -92,3 +93,6 @@ stretch_margin_bottom = 4
 texture_under = ExtResource("7_6q3v7")
 texture_progress = ExtResource("8_fuwb8")
 script = ExtResource("6_37vq8")
+
+[node name="Snake" parent="." instance=ExtResource("10_26451")]
+position = Vector2(-618, 104)
