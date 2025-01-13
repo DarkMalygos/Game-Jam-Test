@@ -21,6 +21,11 @@ func try_reduce_current_health(amount: float):
 	var test_amount := current_health - amount
 		
 	current_health = max(0, min(max_health, test_amount))
+	
+	if current_health == 0:
+		get_parent().queue_free()
+		return
+		
 	_reduce_current_health()
 
 func _reduce_current_health():

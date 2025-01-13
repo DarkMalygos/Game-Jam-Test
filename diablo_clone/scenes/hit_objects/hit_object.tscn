@@ -1,7 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbtps2ggbe8je"]
+[gd_scene load_steps=5 format=3 uid="uid://bbtps2ggbe8je"]
 
 [ext_resource type="Script" path="res://scripts/hit_objects/hit_object.gd" id="1_33trh"]
-[ext_resource type="Texture2D" uid="uid://dhl54hefromtr" path="res://assets/sprites/obsticles/lights/torch_light.png" id="1_ieaaf"]
+[ext_resource type="Texture2D" uid="uid://brmllx2i5gem8" path="res://assets/sprites/hit_objects/fire_ball.png" id="2_l6ix5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dy233"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_l6ix5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s0xfx"]
 radius = 15.0
@@ -10,8 +21,8 @@ radius = 15.0
 scale = Vector2(0.3, 0.3)
 script = ExtResource("1_33trh")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ieaaf")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dy233")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2

@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bpt2dilt7cj5g" path="res://assets/sprites/entities/health_bar/background_health_bar.png" id="7_6q3v7"]
 [ext_resource type="PackedScene" uid="uid://qkmcv2w7ijyv" path="res://scenes/obsticles/lights/torch_group_3.tscn" id="7_y4uci"]
 [ext_resource type="Texture2D" uid="uid://t8r0esnrqp5v" path="res://assets/sprites/entities/health_bar/progress_health_bar.png" id="8_fuwb8"]
-[ext_resource type="PackedScene" uid="uid://gd08nut0n7l5" path="res://scenes/entities/enemies/enemy.tscn" id="9_gfb3g"]
+[ext_resource type="PackedScene" uid="uid://cd6ub4xuk3wl5" path="res://scenes/entities/enemies/snake.tscn" id="10_26451"]
 [ext_resource type="PackedScene" uid="uid://dx3chiiktgwrs" path="res://scenes/obsticles/lights/torches_on_lands.tscn" id="11_d37wg"]
 
 [sub_resource type="Gradient" id="Gradient_uitbr"]
@@ -62,11 +62,23 @@ position = Vector2(15, -31)
 [node name="MainCharacter" parent="." instance=ExtResource("4_rqk01")]
 position = Vector2(-618, 91)
 
-[node name="Enemy2" parent="." instance=ExtResource("9_gfb3g")]
-position = Vector2(-684, 59)
+[node name="Snake" parent="." instance=ExtResource("10_26451")]
+position = Vector2(-595, 44)
 
-[node name="Enemy" parent="." instance=ExtResource("9_gfb3g")]
-position = Vector2(-538, 116)
+[node name="Snake2" parent="." instance=ExtResource("10_26451")]
+position = Vector2(-557, 76)
+
+[node name="Snake3" parent="." instance=ExtResource("10_26451")]
+position = Vector2(-554, 108)
+
+[node name="Snake4" parent="." instance=ExtResource("10_26451")]
+position = Vector2(-604, 127)
+
+[node name="Snake5" parent="." instance=ExtResource("10_26451")]
+position = Vector2(-643, 51)
+
+[node name="Snake6" parent="." instance=ExtResource("10_26451")]
+position = Vector2(-668, 85)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

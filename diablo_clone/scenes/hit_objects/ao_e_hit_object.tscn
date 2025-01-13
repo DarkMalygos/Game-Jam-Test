@@ -1,8 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://bcaiyarjww7va"]
+[gd_scene load_steps=8 format=3 uid="uid://bcaiyarjww7va"]
 
 [ext_resource type="PackedScene" uid="uid://bbtps2ggbe8je" path="res://scenes/hit_objects/hit_object.tscn" id="1_vsurq"]
 [ext_resource type="Script" path="res://scripts/hit_objects/projectiles/ao_e_hit_object.gd" id="2_11v8l"]
-[ext_resource type="Texture2D" uid="uid://b5be1nuk4rv11" path="res://assets/sprites/hit_objects/ao_e.png" id="2_ovl1c"]
+[ext_resource type="Texture2D" uid="uid://bduwdmqakown4" path="res://assets/sprites/hit_objects/fire_ball0.png" id="3_ly88i"]
+[ext_resource type="Texture2D" uid="uid://c542j86jkqjul" path="res://assets/sprites/hit_objects/fire_ball1.png" id="4_1boeo"]
+[ext_resource type="Texture2D" uid="uid://dhl54hefromtr" path="res://assets/sprites/obsticles/lights/torch_light.png" id="5_q3fc7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xaq3v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ly88i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1boeo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ghpuf"]
 radius = 6.66667
@@ -12,13 +28,20 @@ height = 20.0
 scale = Vector2(1, 1)
 script = ExtResource("2_11v8l")
 
-[node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_ovl1c")
+[node name="AnimatedSprite2D" parent="." index="0"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_xaq3v")
 
-[node name="Area2D" parent="." index="1"]
+[node name="PointLight2D" type="PointLight2D" parent="." index="1"]
+position = Vector2(0, 3)
+color = Color(1, 0.411765, 0.419608, 1)
+texture = ExtResource("5_q3fc7")
+
+[node name="Area2D" parent="." index="2"]
 rotation = 1.5708
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(4, -1.448e-05)
 shape = SubResource("CapsuleShape2D_ghpuf")
 
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

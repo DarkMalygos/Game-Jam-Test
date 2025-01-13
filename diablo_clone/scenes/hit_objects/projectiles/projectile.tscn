@@ -1,11 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsjjog4vrdx0e"]
+[gd_scene load_steps=3 format=3 uid="uid://dsjjog4vrdx0e"]
 
 [ext_resource type="PackedScene" uid="uid://bbtps2ggbe8je" path="res://scenes/hit_objects/hit_object.tscn" id="1_tyfjc"]
 [ext_resource type="Script" path="res://scripts/hit_objects/projectiles/projectile.gd" id="2_pif3l"]
-[ext_resource type="Texture2D" uid="uid://cchlqegel7wjr" path="res://assets/sprites/hit_objects/projectile.png" id="3_yecay"]
 
 [node name="Projectile" instance=ExtResource("1_tyfjc")]
+scale = Vector2(1, 1)
 script = ExtResource("2_pif3l")
-
-[node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("3_yecay")

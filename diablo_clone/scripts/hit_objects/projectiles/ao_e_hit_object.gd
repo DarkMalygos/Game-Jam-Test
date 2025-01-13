@@ -6,6 +6,9 @@ signal target_exited
 var life_time: float
 var current_life_time := 0.0
 
+func _ready() -> void:
+	$AnimatedSprite2D.play()
+
 func _process(delta: float) -> void:
 	if current_life_time >= life_time:
 		queue_free()
