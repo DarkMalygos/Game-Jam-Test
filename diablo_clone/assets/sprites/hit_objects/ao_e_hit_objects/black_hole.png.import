@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bduwdmqakown4"
-path="res://.godot/imported/fire_ball0.png-7a9a45db4d6bab8ce819a14badb95aac.ctex"
+uid="uid://bdiqplpfs8xbx"
+path="res://.godot/imported/black_hole.png-7339fa6acab913503756ae718d1dcea2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/hit_objects/fire_ball0.png"
-dest_files=["res://.godot/imported/fire_ball0.png-7a9a45db4d6bab8ce819a14badb95aac.ctex"]
+source_file="res://assets/sprites/hit_objects/ao_e_hit_objects/black_hole.png"
+dest_files=["res://.godot/imported/black_hole.png-7339fa6acab913503756ae718d1dcea2.ctex"]
 
 [params]
 

@@ -8,6 +8,7 @@ class_name Ability
 
 var cooldown_timer := 0.0
 var active := true
+var collision_count := 0
 
 func _process(delta: float) -> void:
 	if active:
@@ -18,6 +19,7 @@ func _process(delta: float) -> void:
 	if cooldown_timer >= cooldown:
 		active = true
 		cooldown_timer = 0
+		collision_count = 0
 		print(name, " is active")
 
 func try_activate(user: CharacterBody2D, target_group: String, target_position: Vector2):

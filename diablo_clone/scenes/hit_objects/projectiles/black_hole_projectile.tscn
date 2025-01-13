@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhuoj6y1ja6hd"]
+
+[ext_resource type="PackedScene" uid="uid://dsjjog4vrdx0e" path="res://scenes/hit_objects/projectiles/projectile.tscn" id="1_3g8pg"]
+[ext_resource type="Texture2D" uid="uid://bjgg0kxxwunr" path="res://assets/sprites/hit_objects/projectiles/black_hole_projectile.png" id="2_hx5k5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iyj2n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hx5k5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BlackHoleProjectile" instance=ExtResource("1_3g8pg")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(-41, 12)
+sprite_frames = SubResource("SpriteFrames_iyj2n")

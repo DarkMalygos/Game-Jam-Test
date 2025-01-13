@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcaiyarjww7va"]
+[gd_scene load_steps=7 format=3 uid="uid://bcaiyarjww7va"]
 
 [ext_resource type="PackedScene" uid="uid://bbtps2ggbe8je" path="res://scenes/hit_objects/hit_object.tscn" id="1_vsurq"]
 [ext_resource type="Script" path="res://scripts/hit_objects/projectiles/ao_e_hit_object.gd" id="2_11v8l"]
-[ext_resource type="Texture2D" uid="uid://bduwdmqakown4" path="res://assets/sprites/hit_objects/fire_ball0.png" id="3_ly88i"]
-[ext_resource type="Texture2D" uid="uid://c542j86jkqjul" path="res://assets/sprites/hit_objects/fire_ball1.png" id="4_1boeo"]
-[ext_resource type="Texture2D" uid="uid://dhl54hefromtr" path="res://assets/sprites/obsticles/lights/torch_light.png" id="5_q3fc7"]
+[ext_resource type="Texture2D" uid="uid://bduwdmqakown4" path="res://assets/sprites/hit_objects/ao_e_hit_objects/fireball_explosion/fireball_explosion.png" id="3_ly88i"]
+[ext_resource type="Texture2D" uid="uid://c542j86jkqjul" path="res://assets/sprites/hit_objects/ao_e_hit_objects/fireball_explosion/fireball_explosion_1.png" id="4_1boeo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xaq3v"]
 animations = [{
@@ -32,14 +31,7 @@ script = ExtResource("2_11v8l")
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_xaq3v")
 
-[node name="PointLight2D" type="PointLight2D" parent="." index="1"]
-position = Vector2(1, -4)
-scale = Vector2(0.8, 0.8)
-color = Color(1, 0.411765, 0.419608, 1)
-energy = 2.0
-texture = ExtResource("5_q3fc7")
-
-[node name="Area2D" parent="." index="2"]
+[node name="Area2D" parent="." index="1"]
 rotation = 1.5708
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]

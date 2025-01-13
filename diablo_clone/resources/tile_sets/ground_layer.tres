@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=29 format=3 uid="uid://chai62qdkj712"]
+[gd_resource type="TileSet" load_steps=27 format=3 uid="uid://chai62qdkj712"]
 
 [ext_resource type="Texture2D" uid="uid://csnl4dp1q1uc3" path="res://assets/sprites/tiles/iso_tileset.png" id="1_kcwyn"]
 [ext_resource type="Texture2D" uid="uid://d1uuubjiy2ppw" path="res://assets/sprites/tiles/water.png" id="2_bmi3s"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://kmr4mlbl264h" path="res://assets/sprites/tiles/stone_tileset.png" id="9_m5muf"]
 [ext_resource type="Texture2D" uid="uid://ctdfofeaw8jhy" path="res://assets/sprites/tiles/grass_set.png" id="10_f7gpw"]
 [ext_resource type="Texture2D" uid="uid://bowdyh7ri1nh0" path="res://assets/sprites/tiles/palm_trree.png" id="11_dwenk"]
-[ext_resource type="Texture2D" uid="uid://c84oftb5nbfi3" path="res://assets/sprites/tiles/stone_tileset_wall.png" id="12_smu26"]
 [ext_resource type="Texture2D" uid="uid://cvvidp5jklpcy" path="res://assets/sprites/tiles/wood_plank_tileset.png" id="13_ym3ip"]
 [ext_resource type="Texture2D" uid="uid://d0slwjvt2l786" path="res://assets/sprites/tiles/stonewall_tileset.png" id="14_2ixtu"]
 
@@ -107,22 +106,6 @@ texture = ExtResource("11_dwenk")
 texture_region_size = Vector2i(34, 60)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1ur4n"]
-texture = ExtResource("12_smu26")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-0:0/0/texture_origin = Vector2i(0, -8)
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, -16.625, 14, 0.875, 21.75, 15.625, 15.5, 16, 0, 0, -8)
-1:0/0 = 0
-1:0/0/texture_origin = Vector2i(0, -8)
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, -16.625, 14, 0.875, 21.75, 15.625, 15.5, 16, 0, 0, -8)
-2:0/0 = 0
-2:0/0/texture_origin = Vector2i(0, -8)
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, -16.625, 14, 0.875, 21.75, 15.625, 15.5, 16, 0, 0, -8)
-3:0/0 = 0
-3:0/0/texture_origin = Vector2i(0, -8)
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, -16.625, 14, 0.875, 21.75, 15.625, 15.5, 16, 0, 0, -8)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yie0l"]
 texture = ExtResource("13_ym3ip")
 texture_region_size = Vector2i(32, 32)
@@ -154,7 +137,6 @@ sources/0 = SubResource("TileSetAtlasSource_5xdlw")
 sources/3 = SubResource("TileSetAtlasSource_lavw7")
 sources/4 = SubResource("TileSetAtlasSource_uyo1q")
 sources/9 = SubResource("TileSetAtlasSource_412e7")
-sources/7 = SubResource("TileSetAtlasSource_1ur4n")
 sources/8 = SubResource("TileSetAtlasSource_yie0l")
 sources/5 = SubResource("TileSetAtlasSource_lhr2e")
 sources/6 = SubResource("TileSetAtlasSource_3o4xt")

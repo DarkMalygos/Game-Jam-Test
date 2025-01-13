@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bbtps2ggbe8je"]
 
 [ext_resource type="Script" path="res://scripts/hit_objects/hit_object.gd" id="1_33trh"]
-[ext_resource type="Texture2D" uid="uid://v3bst2e5213l" path="res://assets/sprites/hit_objects/fire_ball.png" id="2_l6ix5"]
+[ext_resource type="Texture2D" uid="uid://v3bst2e5213l" path="res://assets/sprites/hit_objects/projectiles/fireball.png" id="2_l6ix5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dy233"]
 animations = [{

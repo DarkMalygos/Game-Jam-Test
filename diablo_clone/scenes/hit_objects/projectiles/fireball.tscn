@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://clf01q2rmspe7"]
+
+[ext_resource type="PackedScene" uid="uid://dsjjog4vrdx0e" path="res://scenes/hit_objects/projectiles/projectile.tscn" id="1_owa37"]
+[ext_resource type="Texture2D" uid="uid://dhl54hefromtr" path="res://assets/sprites/obsticles/lights/torch_light.png" id="2_lwai6"]
+
+[node name="Fireball" instance=ExtResource("1_owa37")]
+
+[node name="PointLight2D" type="PointLight2D" parent="." index="2"]
+texture = ExtResource("2_lwai6")

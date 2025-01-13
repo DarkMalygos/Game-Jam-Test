@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2qvjulkesrnx"]
+
+[ext_resource type="PackedScene" uid="uid://bcaiyarjww7va" path="res://scenes/hit_objects/ao_e_hit_objects/ao_e_hit_object.tscn" id="1_dy8rl"]
+
+[node name="BlackHole" instance=ExtResource("1_dy8rl")]

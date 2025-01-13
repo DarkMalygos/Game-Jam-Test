@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy1ia63r1h8wp"]
+
+[ext_resource type="PackedScene" uid="uid://csujn8nl3qiak" path="res://scenes/abilities/ability.tscn" id="1_metgc"]
+[ext_resource type="Script" path="res://scripts/abilities/black_hole_ability.gd" id="2_h1wcq"]
+
+[node name="BlackHoleAbility" instance=ExtResource("1_metgc")]
+script = ExtResource("2_h1wcq")
