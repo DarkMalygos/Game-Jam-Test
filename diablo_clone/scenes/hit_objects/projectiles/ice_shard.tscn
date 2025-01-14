@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://buslr7hrtoex2"]
+
+[ext_resource type="PackedScene" uid="uid://dsjjog4vrdx0e" path="res://scenes/hit_objects/projectiles/projectile.tscn" id="1_om6c4"]
+[ext_resource type="Texture2D" uid="uid://bo4hu554oiihm" path="res://assets/sprites/hit_objects/projectiles/test_ice_shard.png" id="2_0ykbs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2nd6w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0ykbs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="IceShard" instance=ExtResource("1_om6c4")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, 0)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_2nd6w")

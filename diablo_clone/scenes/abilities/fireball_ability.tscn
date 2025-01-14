@@ -17,6 +17,7 @@ cooldown = 1.0
 [node name="SingleTargetComponent" parent="." index="1" instance=ExtResource("5_57sg6")]
 
 [node name="DamageComponent" parent="." index="2" instance=ExtResource("4_1ra47")]
+damage = 10.0
 
 [node name="AoEComponent" parent="." index="3" instance=ExtResource("6_1wpex")]
 

@@ -1,0 +1,20 @@
+[gd_scene load_steps=7 format=3 uid="uid://sj0mbr62ipm6"]
+
+[ext_resource type="PackedScene" uid="uid://csujn8nl3qiak" path="res://scenes/abilities/ability.tscn" id="1_t1sfn"]
+[ext_resource type="Script" path="res://scripts/abilities/ice_shard_ability.gd" id="2_1eioc"]
+[ext_resource type="PackedScene" uid="uid://ckj7kwprp3pgq" path="res://scenes/abilities/ability_components/single_target_component.tscn" id="3_5ilwm"]
+[ext_resource type="PackedScene" uid="uid://embuolrmjim4" path="res://scenes/abilities/ability_components/ranged_component.tscn" id="4_6dwuv"]
+[ext_resource type="PackedScene" uid="uid://ctxeala4uin4s" path="res://scenes/abilities/ability_components/damage_component.tscn" id="5_wuidg"]
+[ext_resource type="PackedScene" uid="uid://d3hi15sn45s6b" path="res://scenes/abilities/ability_components/affliction_component.tscn" id="6_34lop"]
+
+[node name="IceShardAbility" instance=ExtResource("1_t1sfn")]
+script = ExtResource("2_1eioc")
+
+[node name="SingleTargetComponent" parent="." index="0" instance=ExtResource("3_5ilwm")]
+
+[node name="RangedComponent" parent="." index="1" instance=ExtResource("4_6dwuv")]
+
+[node name="DamageComponent" parent="." index="2" instance=ExtResource("5_wuidg")]
+damage = 10.0
+
+[node name="AfflictionComponent" parent="." index="3" instance=ExtResource("6_34lop")]

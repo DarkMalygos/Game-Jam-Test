@@ -9,3 +9,4 @@ script = ExtResource("2_477uo")
 cooldown = 1.0
 
 [node name="DamageComponent" parent="." index="0" instance=ExtResource("3_lqlls")]
+damage = 2.5

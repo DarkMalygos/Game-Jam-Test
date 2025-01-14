@@ -5,6 +5,10 @@ func _ready() -> void:
 	$AnimatedSprite2D.play("move")
 
 func _process(delta: float) -> void:
+	if can_use_ability:
+		_activate_ability()
+
+func _activate_ability():
 	if !main_character:
 		return
 	

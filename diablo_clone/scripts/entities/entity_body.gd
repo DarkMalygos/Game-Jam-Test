@@ -2,9 +2,12 @@ extends CharacterBody2D
 class_name EntityBody
 
 @export var max_health := 100.0
-@onready var current_health: int = max_health
 @export var speed := 40
 
+@onready var current_health: int = max_health
+
+var is_moving := true
+var can_use_ability := true
 var weapon: Weapon
 
 func _ready() -> void:
@@ -24,11 +27,15 @@ func try_reduce_current_health(amount: float):
 	
 	if current_health == 0:
 		get_parent().queue_free()
-		#print("dead")
 		return
 		
 	_reduce_current_health()
 
 func _reduce_current_health():
-	print(get_parent().name, ": ", current_health)
+	push_error("abstract method")
+
+func _move(delta: float):
+	push_error("abstract method")
+	
+func _activate_ability():
 	push_error("abstract method")

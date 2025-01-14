@@ -9,6 +9,13 @@ var gravity = -100
 var jump_strength = 80.0
 
 func _physics_process(delta: float) -> void:
+	if is_moving:
+		_move(delta)
+		
+	if can_use_ability:
+		_activate_ability()
+
+func _move(delta: float):
 	var direction: Vector2
 	
 	if Input.is_action_just_pressed("jump") and z_position == 0:
@@ -23,7 +30,6 @@ func _physics_process(delta: float) -> void:
 		z_velocity = 0
 		
 		direction = Input.get_vector("movement_left", "movement_right", "movement_up", "movement_down")
-		
 	else:
 		if Input.is_action_pressed("movement_left"):
 			print(velocity)
@@ -33,15 +39,14 @@ func _physics_process(delta: float) -> void:
 			direction = Vector2(1, 0)
 			
 	set_main_character_velocitiy(direction)
-			
 	update_character_position()
+	move_and_slide()
 	
+func _activate_ability():
 	if Input.is_action_pressed("ability_one"):
 		weapon.activate(0, self, "enemy", get_global_mouse_position())
 	if Input.is_action_pressed("ability_two"):
 		weapon.activate(1, self, "enemy", get_global_mouse_position())
-
-	move_and_slide()
 
 func set_main_character_velocitiy(direction: Vector2):
 		if direction:

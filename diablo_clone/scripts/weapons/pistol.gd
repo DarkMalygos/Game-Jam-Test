@@ -1,3 +1,3 @@
 @tool
 extends Weapon
-class_name Staff
+class_name Pistol

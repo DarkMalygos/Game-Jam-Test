@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://hcpgw82lp003"]
+
+[ext_resource type="PackedScene" uid="uid://jm6f376re42h" path="res://scenes/afflictions/affliction.tscn" id="1_8m0xw"]
+[ext_resource type="Script" path="res://scripts/afflictions/ice_affliction.gd" id="2_eth1n"]
+
+[node name="IceAffliction" instance=ExtResource("1_8m0xw")]
+script = ExtResource("2_eth1n")
+
+[node name="ColorRect" parent="." index="0"]
+color = Color(0, 0, 1, 0.25098)

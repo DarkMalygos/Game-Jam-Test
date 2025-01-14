@@ -6,6 +6,10 @@ class_name EnemyBody
 var colliding_enemy_area: Area2D
 
 func _physics_process(delta: float) -> void:
+	if is_moving:
+		_move(delta)
+	
+func _move(delta: float):
 	if !main_character:
 		return
 	

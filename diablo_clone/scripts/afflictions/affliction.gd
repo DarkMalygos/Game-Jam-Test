@@ -4,12 +4,14 @@ class_name Affliction
 @export var life_time := 3.0
 @export var apply_time := .5
 
-var _current_life_time := 0.0
 @onready var _current_apply_time := apply_time
+
+var _current_life_time := 0.0
 var afflicted_target: CharacterBody2D
 
 func _process(delta: float) -> void:
 	if _current_life_time >= life_time:
+		life_time_ended()
 		queue_free()
 		return
 		
@@ -24,3 +26,6 @@ func _process(delta: float) -> void:
 
 func apply():
 	push_error("abstract method")
+	
+func life_time_ended():
+	pass
