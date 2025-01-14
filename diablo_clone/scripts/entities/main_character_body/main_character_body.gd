@@ -13,6 +13,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("jump") and z_position == 0:
 		z_velocity = jump_strength
+		print(velocity)
 	
 	z_velocity += gravity * delta
 	z_position += z_velocity * delta
@@ -23,10 +24,12 @@ func _physics_process(delta: float) -> void:
 		
 		direction = Input.get_vector("movement_left", "movement_right", "movement_up", "movement_down")
 		
-	else:	
+	else:
 		if Input.is_action_pressed("movement_left"):
+			print(velocity)
 			direction = Vector2(-1, 0)
 		if Input.is_action_pressed("movement_right"):
+			print(velocity)
 			direction = Vector2(1, 0)
 			
 	set_main_character_velocitiy(direction)
