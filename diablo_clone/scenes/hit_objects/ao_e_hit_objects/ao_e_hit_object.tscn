@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bcaiyarjww7va"]
 
 [ext_resource type="PackedScene" uid="uid://bbtps2ggbe8je" path="res://scenes/hit_objects/hit_object.tscn" id="1_vsurq"]
-[ext_resource type="Script" path="res://scripts/hit_objects/projectiles/ao_e_hit_object.gd" id="2_11v8l"]
+[ext_resource type="Script" path="res://scripts/hit_objects/ao_e_hit_objects/ao_e_hit_object.gd" id="2_11v8l"]
 [ext_resource type="Texture2D" uid="uid://bduwdmqakown4" path="res://assets/sprites/hit_objects/ao_e_hit_objects/fireball_explosion/fireball_explosion.png" id="3_ly88i"]
 [ext_resource type="Texture2D" uid="uid://c542j86jkqjul" path="res://assets/sprites/hit_objects/ao_e_hit_objects/fireball_explosion/fireball_explosion_1.png" id="4_1boeo"]
 
@@ -20,8 +20,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ghpuf"]
-radius = 6.66667
-height = 20.0
+radius = 2.0
+height = 16.0
 
 [node name="AoEHitObject" instance=ExtResource("1_vsurq")]
 scale = Vector2(1, 1)

@@ -1,7 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://cy1ia63r1h8wp"]
+[gd_scene load_steps=7 format=3 uid="uid://dmxwjigea68he"]
 
 [ext_resource type="PackedScene" uid="uid://csujn8nl3qiak" path="res://scenes/abilities/ability.tscn" id="1_metgc"]
 [ext_resource type="Script" path="res://scripts/abilities/black_hole_ability.gd" id="2_h1wcq"]
+[ext_resource type="PackedScene" uid="uid://embuolrmjim4" path="res://scenes/abilities/ability_components/ranged_component.tscn" id="3_snnt2"]
+[ext_resource type="PackedScene" uid="uid://ckj7kwprp3pgq" path="res://scenes/abilities/ability_components/single_target_component.tscn" id="4_7debh"]
+[ext_resource type="PackedScene" uid="uid://ctxeala4uin4s" path="res://scenes/abilities/ability_components/damage_component.tscn" id="5_1hm7i"]
+[ext_resource type="PackedScene" uid="uid://cy2jelaiiaj6q" path="res://scenes/abilities/ability_components/ao_e_component.tscn" id="6_brnwd"]
 
 [node name="BlackHoleAbility" instance=ExtResource("1_metgc")]
 script = ExtResource("2_h1wcq")
+
+[node name="RangedComponent" parent="." index="0" instance=ExtResource("3_snnt2")]
+
+[node name="SingleTargetComponent" parent="." index="1" instance=ExtResource("4_7debh")]
+
+[node name="DamageComponent" parent="." index="2" instance=ExtResource("5_1hm7i")]
+damage = 2
+
+[node name="AoEComponent" parent="." index="3" instance=ExtResource("6_brnwd")]

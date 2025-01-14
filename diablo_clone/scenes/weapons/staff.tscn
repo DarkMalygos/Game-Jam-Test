@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ddu0bjt5tfdbf" path="res://scenes/weapons/weapon.tscn" id="1_oxh8u"]
 [ext_resource type="Script" path="res://scripts/weapons/staff.gd" id="2_6p3mt"]
 [ext_resource type="PackedScene" uid="uid://b1g7xg68ticof" path="res://scenes/abilities/fireball_ability.tscn" id="3_nr20n"]
-[ext_resource type="PackedScene" uid="uid://be6nekgyxgxi4" path="res://scenes/abilities/heal_ability.tscn" id="4_npo1d"]
+[ext_resource type="PackedScene" uid="uid://dmxwjigea68he" path="res://scenes/abilities/black_hole_ability.tscn" id="4_j1sq1"]
 
 [node name="Staff" instance=ExtResource("1_oxh8u")]
 script = ExtResource("2_6p3mt")
@@ -12,6 +12,6 @@ maximum = 3
 current = 2
 allowed_ability_components = Array[String](["RangedComponent", "DamageComponent", "SingleTargetComponent", "HealComponent", "AoEComponent", "AfflictionComponent"])
 
-[node name="HealAbility" parent="." index="2" instance=ExtResource("4_npo1d")]
+[node name="FireballAbility" parent="." index="2" instance=ExtResource("3_nr20n")]
 
-[node name="FireballAbility" parent="." index="3" instance=ExtResource("3_nr20n")]
+[node name="BlackHoleAbility" parent="." index="3" instance=ExtResource("4_j1sq1")]

@@ -6,4 +6,5 @@
 [node name="FireballExplosion" instance=ExtResource("1_ppl62")]
 
 [node name="PointLight2D" type="PointLight2D" parent="." index="2"]
+color = Color(1, 0.305882, 0.356863, 1)
 texture = ExtResource("2_fa3se")

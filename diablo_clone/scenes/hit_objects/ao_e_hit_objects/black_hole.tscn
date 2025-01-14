@@ -1,5 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2qvjulkesrnx"]
+[gd_scene load_steps=6 format=3 uid="uid://d2qvjulkesrnx"]
 
 [ext_resource type="PackedScene" uid="uid://bcaiyarjww7va" path="res://scenes/hit_objects/ao_e_hit_objects/ao_e_hit_object.tscn" id="1_dy8rl"]
+[ext_resource type="Texture2D" uid="uid://bdiqplpfs8xbx" path="res://assets/sprites/hit_objects/ao_e_hit_objects/black_hole.png" id="2_pptk6"]
+[ext_resource type="Script" path="res://scripts/hit_objects/ao_e_hit_objects/black_hole.gd" id="2_ss31w"]
+[ext_resource type="Texture2D" uid="uid://b4c7fkdtsx8s" path="res://assets/sprites/hit_objects/ao_e_hit_objects/black_hole_closing.png" id="3_swn50"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6b21d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_swn50")
+}],
+"loop": false,
+"name": &"closing",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pptk6")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="BlackHole" instance=ExtResource("1_dy8rl")]
+script = ExtResource("2_ss31w")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(-26, 6)
+sprite_frames = SubResource("SpriteFrames_6b21d")
+speed_scale = 2.0
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+rotation = 1.5708
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
