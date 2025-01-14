@@ -29,10 +29,14 @@ animations = [{
 
 [node name="CharacterBody2D" parent="." index="0" groups=["main_character"]]
 script = ExtResource("2_uxssg")
+speed = 70
 
 [node name="AnimatedSprite2D" parent="CharacterBody2D" index="0"]
 sprite_frames = SubResource("SpriteFrames_ja7jk")
 animation = &"shoot"
+
+[node name="CollisionShape2D" parent="CharacterBody2D" index="1"]
+position = Vector2(-3.33333, 26.6667)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" index="3"]
 zoom = Vector2(6, 6)

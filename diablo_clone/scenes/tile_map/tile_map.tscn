@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dprx05im4l6o2"]
+[gd_scene load_steps=14 format=4 uid="uid://dprx05im4l6o2"]
 
 [ext_resource type="TileSet" uid="uid://chai62qdkj712" path="res://resources/tile_sets/ground_layer.tres" id="1_cwxdo"]
 [ext_resource type="TileSet" uid="uid://bsprh60fd27g5" path="res://resources/tile_sets/obstacle_layer.tres" id="1_lep4a"]
@@ -12,16 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://qkmcv2w7ijyv" path="res://scenes/obsticles/lights/torch_group_3.tscn" id="7_y4uci"]
 [ext_resource type="Texture2D" uid="uid://t8r0esnrqp5v" path="res://assets/sprites/entities/health_bar/progress_health_bar.png" id="8_fuwb8"]
 [ext_resource type="PackedScene" uid="uid://iuvfuym156g6" path="res://scenes/entities/enemies/frog.tscn" id="10_08eqn"]
-[ext_resource type="PackedScene" uid="uid://cd6ub4xuk3wl5" path="res://scenes/entities/enemies/snake.tscn" id="10_26451"]
 [ext_resource type="PackedScene" uid="uid://dx3chiiktgwrs" path="res://scenes/obsticles/lights/torches_on_lands.tscn" id="11_d37wg"]
-
-[sub_resource type="Gradient" id="Gradient_uitbr"]
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_c4eiy"]
-gradient = SubResource("Gradient_uitbr")
-width = 134
-fill = 1
 
 [node name="TileMap" type="Node2D"]
 position = Vector2(-769, 37)
@@ -42,13 +33,6 @@ self_modulate = Color(0.498039, 0.498039, 0.498039, 1)
 tile_map_data = PackedByteArray("AAAFACsABwAAAAAAAAAFABMABwAAAAAAAADs/ysABwAAAAAAAAAMAPf/BwAAAAAAAAAMAAoABwAAAAAAAAAdAA0ABwAAAAAAAAAaAPf/BwAAAAAAAAAHAAYABAAAAAAAAADt/wYABAAAAAAAAAAHAPH/BAAAAAAAAAA=")
 tile_set = ExtResource("1_lep4a")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(282, 50)
-scale = Vector2(30, 26.368)
-color = Color(0.661357, 0, 0.27201, 1)
-energy = 1.5
-texture = SubResource("GradientTexture2D_c4eiy")
-
 [node name="AztecTemple" parent="." instance=ExtResource("3_03mql")]
 position = Vector2(35, -172)
 scale = Vector2(1.5, 1.5)
@@ -62,10 +46,9 @@ scale = Vector2(1.3, 1.3)
 [node name="TorchGroup3" parent="." instance=ExtResource("7_y4uci")]
 
 [node name="TorchesOnLands" parent="." instance=ExtResource("11_d37wg")]
-visible = false
 
 [node name="MainCharacter" parent="." instance=ExtResource("4_rqk01")]
-position = Vector2(-172, -2)
+position = Vector2(-654, 116)
 scale = Vector2(0.25, 0.25)
 
 [node name="Frog" parent="." instance=ExtResource("10_08eqn")]
@@ -93,6 +76,3 @@ stretch_margin_bottom = 4
 texture_under = ExtResource("7_6q3v7")
 texture_progress = ExtResource("8_fuwb8")
 script = ExtResource("6_37vq8")
-
-[node name="Snake" parent="." instance=ExtResource("10_26451")]
-position = Vector2(-618, 104)
