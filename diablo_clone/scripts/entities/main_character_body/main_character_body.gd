@@ -3,15 +3,23 @@ class_name MainCharacterBody
 
 signal health_changed()
 
-#@export var jump_velocity = -40.0
+var z_velocity = 0.0
+var z_position = 0.0
+var gravity = -100
+var jump_strength = 80.0
 
 func _physics_process(delta: float) -> void:
-	#if not is_on_floor():
-		#velocity += get_gravity() * delta
-#
-	## Handle jump.
-	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		#velocity.y = jump_velocity
+	if Input.is_action_just_pressed("jump") and z_position == 0:
+		z_velocity = jump_strength
+	
+	z_velocity += gravity * delta
+	z_position += z_velocity * delta
+	
+	if z_position <= 0:
+		z_position = 0
+		z_velocity = 0
+	
+	update_character_position()
 	
 	if Input.is_action_pressed("ability_one"):
 		weapon.activate(0, self, "enemy", get_global_mouse_position())
@@ -25,6 +33,13 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector2.ZERO
 
 	move_and_slide()
+
+func update_character_position():
+	var screen_position = Vector2(position.x, position.y - z_position)
+	$AnimatedSprite2D.position = screen_position
+	$CollisionShape2D.position = screen_position
+	$Camera2D.position = screen_position
+	weapon.position = screen_position
 
 func _reduce_current_health():
 	health_changed.emit()
