@@ -12,6 +12,6 @@ maximum = 3
 current = 2
 allowed_ability_components = Array[String](["RangedComponent", "DamageComponent", "SingleTargetComponent", "HealComponent", "AoEComponent", "AfflictionComponent"])
 
-[node name="FireballAbility" parent="." index="2" instance=ExtResource("3_nr20n")]
+[node name="FireballAbility" parent="." index="1" instance=ExtResource("3_nr20n")]
 
-[node name="BlackHoleAbility" parent="." index="3" instance=ExtResource("4_j1sq1")]
+[node name="BlackHoleAbility" parent="." index="2" instance=ExtResource("4_j1sq1")]

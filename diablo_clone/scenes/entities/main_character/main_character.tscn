@@ -26,6 +26,8 @@ animations = [{
 }]
 
 [node name="MainCharacter" instance=ExtResource("1_1s8lj")]
+z_index = 1
+y_sort_enabled = true
 
 [node name="CharacterBody2D" parent="." index="0" groups=["main_character"]]
 script = ExtResource("2_uxssg")

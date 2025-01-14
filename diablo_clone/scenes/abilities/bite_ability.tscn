@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvkxradskg5op"]
+
+[ext_resource type="PackedScene" uid="uid://csujn8nl3qiak" path="res://scenes/abilities/ability.tscn" id="1_7vq0w"]
+[ext_resource type="Script" path="res://scripts/abilities/bite_ability.gd" id="2_477uo"]
+[ext_resource type="PackedScene" uid="uid://ctxeala4uin4s" path="res://scenes/abilities/ability_components/damage_component.tscn" id="3_lqlls"]
+
+[node name="BiteAbility" instance=ExtResource("1_7vq0w")]
+script = ExtResource("2_477uo")
+cooldown = 1.0
+
+[node name="DamageComponent" parent="." index="0" instance=ExtResource("3_lqlls")]

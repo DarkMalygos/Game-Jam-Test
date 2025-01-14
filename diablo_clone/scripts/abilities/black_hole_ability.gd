@@ -42,5 +42,5 @@ func _on_ao_e_target_group_collision(hit_object: HitObject, target: CharacterBod
 		return
 		
 	hit_object.get_node("AnimatedSprite2D").play("closing")
-	target.queue_free()
+	target.try_reduce_current_health(target.max_health)
 	collision_count += 1

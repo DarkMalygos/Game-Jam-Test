@@ -1,13 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://cd6ub4xuk3wl5"]
+[gd_scene load_steps=13 format=3 uid="uid://cd6ub4xuk3wl5"]
 
 [ext_resource type="PackedScene" uid="uid://gd08nut0n7l5" path="res://scenes/entities/enemies/enemy.tscn" id="1_u187e"]
-[ext_resource type="Script" path="res://scripts/entities/enemies/snake.gd" id="2_qbsv1"]
+[ext_resource type="Script" path="res://scripts/entities/enemies/snake_body.gd" id="2_qbsv1"]
 [ext_resource type="Texture2D" uid="uid://nyscm82gvx64" path="res://assets/sprites/entities/enemies/snake/snake.png" id="3_ccjf1"]
 [ext_resource type="Texture2D" uid="uid://so3e17sgkhnf" path="res://assets/sprites/entities/enemies/snake/snake2.png" id="4_xfahs"]
 [ext_resource type="Texture2D" uid="uid://cayihvjgiawy6" path="res://assets/sprites/entities/enemies/snake/snake3.png" id="5_prrh3"]
 [ext_resource type="Texture2D" uid="uid://b1nw26kymlxus" path="res://assets/sprites/entities/enemies/snake/snake4.png" id="6_fskqo"]
 [ext_resource type="Texture2D" uid="uid://covl5tjt875yu" path="res://assets/sprites/entities/enemies/snake/snake5.png" id="7_ux47h"]
 [ext_resource type="Texture2D" uid="uid://8xo7nw0hoq76" path="res://assets/sprites/entities/enemies/snake/snake1.png" id="8_ii8dy"]
+[ext_resource type="PackedScene" uid="uid://doqywscen542d" path="res://scenes/weapons/fang.tscn" id="9_2rupd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q0fgx"]
 animations = [{
@@ -29,10 +30,16 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_ux47h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xfahs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ccjf1")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -66,13 +73,11 @@ height = 40.0
 
 [node name="CharacterBody2D" parent="." index="0"]
 script = ExtResource("2_qbsv1")
-seperation_distance = 32.0
 
 [node name="AnimatedSprite2D" parent="CharacterBody2D" index="0"]
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_q0fgx")
-animation = &"move"
-frame_progress = 0.135463
+animation = &"attack"
 
 [node name="CollisionShape2D" parent="CharacterBody2D" index="1"]
 position = Vector2(20, 13.3333)
@@ -82,3 +87,7 @@ shape = SubResource("CapsuleShape2D_5ih27")
 [node name="CollisionShape2D" parent="CharacterBody2D/Area2D" index="0"]
 position = Vector2(-10, 4.83169e-13)
 shape = SubResource("CapsuleShape2D_5pl74")
+
+[node name="Fang" parent="CharacterBody2D" index="3" instance=ExtResource("9_2rupd")]
+
+[connection signal="area_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]

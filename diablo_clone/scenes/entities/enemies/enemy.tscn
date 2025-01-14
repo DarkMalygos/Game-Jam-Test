@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://gd08nut0n7l5"]
+[gd_scene load_steps=6 format=3 uid="uid://gd08nut0n7l5"]
 
 [ext_resource type="PackedScene" uid="uid://b0w4pmjhnu7ml" path="res://scenes/entities/entity.tscn" id="1_c30hy"]
 [ext_resource type="Texture2D" uid="uid://lcyb46diqoqo" path="res://assets/sprites/entities/enemies/golden_frog_enemy.png" id="2_80jej"]
 [ext_resource type="Script" path="res://scripts/entities/enemies/enemy_body.gd" id="2_ppo2b"]
-[ext_resource type="PackedScene" uid="uid://bp7wpc31kvew5" path="res://scenes/weapons/staff.tscn" id="4_p20yu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_skrgd"]
 animations = [{
@@ -21,10 +20,11 @@ radius = 6.66667
 height = 26.6667
 
 [node name="Enemy" instance=ExtResource("1_c30hy")]
+z_index = 1
+y_sort_enabled = true
 
 [node name="CharacterBody2D" parent="." index="0" groups=["enemy"]]
 script = ExtResource("2_ppo2b")
-seperation_distance = 8.0
 
 [node name="AnimatedSprite2D" parent="CharacterBody2D" index="0"]
 sprite_frames = SubResource("SpriteFrames_skrgd")
@@ -37,9 +37,7 @@ position = Vector2(3.33333, -4.76837e-07)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_r0nf7")
 
-[node name="Staff" parent="CharacterBody2D" index="3" instance=ExtResource("4_p20yu")]
-
-[node name="HealthBar" type="ProgressBar" parent="CharacterBody2D" index="4"]
+[node name="HealthBar" type="ProgressBar" parent="CharacterBody2D" index="3"]
 offset_top = -30.0
 offset_right = 4.0
 offset_bottom = -3.0

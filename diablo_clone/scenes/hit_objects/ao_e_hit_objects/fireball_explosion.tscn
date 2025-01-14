@@ -8,7 +8,6 @@ radius = 5.0
 height = 18.0
 
 [node name="FireballExplosion" instance=ExtResource("1_ppl62")]
-y_sort_enabled = true
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 shape = SubResource("CapsuleShape2D_t7ca8")

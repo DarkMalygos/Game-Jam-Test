@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dprx05im4l6o2" path="res://scenes/tile_map/tile_map.tscn" id="1_tt5vc"]
 
 [node name="main" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TileMap" parent="." instance=ExtResource("1_tt5vc")]
+y_sort_enabled = true
 position = Vector2(-653, -9)

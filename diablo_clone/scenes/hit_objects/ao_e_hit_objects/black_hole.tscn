@@ -28,9 +28,8 @@ animations = [{
 script = ExtResource("2_ss31w")
 
 [node name="AnimatedSprite2D" parent="." index="0"]
-position = Vector2(-26, 6)
+position = Vector2(0, 0)
 sprite_frames = SubResource("SpriteFrames_6b21d")
-speed_scale = 2.0
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 rotation = 1.5708

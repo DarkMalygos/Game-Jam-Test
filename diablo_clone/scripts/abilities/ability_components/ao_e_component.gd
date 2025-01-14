@@ -9,7 +9,6 @@ func spawn_ao_e_hit_object(packed_hit_object: PackedScene, spawn_position: Vecto
 	var hit_object = packed_hit_object.instantiate()
 	var tile_map = get_node("/root/main/TileMap")
 	tile_map.add_child(hit_object)
-	tile_map.move_child(hit_object, 1)
 	hit_object.global_position = spawn_position
 	hit_object.life_time = duration
 	hit_object.target_group = target_group

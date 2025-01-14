@@ -4,7 +4,7 @@ extends Node2D
 class_name Weapon
 
 #Don't change these:
-@export_group("Ability count")
+@export_group("Ability")
 @export var minimum := 3
 @export var maximum := 6
 @export var current := 0:

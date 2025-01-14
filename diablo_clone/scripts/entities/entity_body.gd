@@ -5,7 +5,7 @@ class_name EntityBody
 @onready var current_health: int = max_health
 @export var speed := 40
 
-var weapon: Node2D
+var weapon: Weapon
 
 func _ready() -> void:
 	weapon = _get_weapon()
