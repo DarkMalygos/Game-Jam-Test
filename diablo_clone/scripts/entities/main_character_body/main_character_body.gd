@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 		_move(delta)
 		
 	if can_use_ability:
-		_activate_ability()
+		_handle_ability_input()
 
 func _move(delta: float):
 	var direction: Vector2
@@ -42,11 +42,18 @@ func _move(delta: float):
 	update_character_position()
 	move_and_slide()
 	
-func _activate_ability():
+func _handle_ability_input():
 	if Input.is_action_pressed("ability_one"):
-		weapon.activate(0, self, "enemy", get_global_mouse_position())
+		_activate_ability(0)
 	if Input.is_action_pressed("ability_two"):
-		weapon.activate(1, self, "enemy", get_global_mouse_position())
+		_activate_ability(1)
+	if Input.is_action_pressed("ability_three"):
+		_activate_ability(2)
+	if Input.is_action_pressed("ability_four"):
+		_activate_ability(3)
+		
+func _activate_ability(index: int):
+	weapon.activate(index, self, "enemy", get_global_mouse_position())
 
 func set_main_character_velocitiy(direction: Vector2):
 		if direction:

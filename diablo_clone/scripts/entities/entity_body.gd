@@ -36,6 +36,3 @@ func _reduce_current_health():
 
 func _move(delta: float):
 	push_error("abstract method")
-	
-func _activate_ability():
-	push_error("abstract method")

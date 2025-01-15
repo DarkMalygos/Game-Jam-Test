@@ -36,6 +36,7 @@ func _on_ao_e_hit_object_created(hit_object: HitObject):
 
 func _on_ao_e_target_group_collision(hit_object: HitObject, target: CharacterBody2D):		
 	if target.current_health > 20:
+		hit_object.queue_free()
 		return
 		
 	if collision_count > 0:
